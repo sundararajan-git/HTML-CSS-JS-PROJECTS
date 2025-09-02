@@ -1,40 +1,105 @@
-* {
-  margin: 0%;
-  padding: 0%;
-  box-sizing: border-box;
-}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 body {
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  justify-content: center;
   align-items: center;
-  height: 100vh;
-  width: 100%;
-  background-color: rgba(166, 245, 245, 0.35);
+  min-height: 100vh;
+  background: #f0f4f8;
+  font-family: Poppins, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, sans-serif;
+  color: #333;
+  padding: 20px;
+  margin: 0px;
+}
+
+h3 {
+  color: #1e293b;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  text-align: center;
+  transition: color 0.3s ease;
 }
 
 #container {
-  display: flex;
-  gap: 20px;
-  padding: 10%;
-  width: 100%;
-  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  width: 90%;
+  max-width: 1200px;
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  background-color: white;
-  width: 50%;
-  height: 50%;
-  padding: 10px;
+  gap: 0px;
+  min-height: 400px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  border: none;
+  transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.card.over {
+  border: 2px dashed #66b2ff;
+  background: #e6f7ff;
+  box-shadow: 0 0 25px rgba(102, 178, 255, 0.4);
+  transform: scale(1.02);
 }
 
 .item {
-  padding: 10px;
-  border-radius: 5px;
-  cursor: drag;
-  background-color: rgba(0, 255, 255, 0.35);
+  padding: 15px 20px;
+  border-radius: 8px;
+  background: linear-gradient(145deg, #000000ff, #000000ff);
+  cursor: grab;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease-in-out;
+  border: 1px solid transparent;
+  color: white;
+}
+
+.item:active {
+  cursor: grabbing;
+}
+
+.item.is-dragging {
+  opacity: 0.6;
+  transform: scale(0.98);
+  background: #e0f7fa;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border-color: #66b2ff;
+}
+
+@media (max-width: 992px) {
+  #container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  #container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 15px;
+  }
+
+  .item {
+    padding: 15px;
+  }
 }
