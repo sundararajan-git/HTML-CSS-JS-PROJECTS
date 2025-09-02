@@ -1,75 +1,91 @@
-// dom elements
+
+// DOM elements
 const passwordGenForm = document.getElementById("passwordGenForm");
 const passwordEle = document.getElementById("password");
+const progressBar = document.getElementById("progressBar");
+const strengthLabel = document.querySelector("#passwordStrengthContainer label");
 
-// var
-const uppercaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-const lowercaseLetters = "abcdefghijklmnopqrstuvwxyz";
-const numberCharacters = "0123456789";
-const symbolCharacters = "!@#$%^&*()-_=+[]{}|;:,.<>?/";
+const chars = {
+  upper: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+  lower: "abcdefghijklmnopqrstuvwxyz",
+  number: "0123456789",
+  symbol: "!@#$%^&*()-_=+[]{}|;:,.<>?/",
+};
 
-// generate handler
 const generateHandler = (event) => {
   event.preventDefault();
+
   const formData = new FormData(passwordGenForm);
   const formJson = Object.fromEntries(formData);
+
   const password = genPassword(formJson);
-  passwordEle.innerText = password;
+  passwordEle.innerText = password || "⚠️ Select at least one option";
   calPassStrength(password);
 };
 
-const genPassword = (json) => {
-  const {
-    passwordlength: length,
-    includeUppercase,
-    includeLowercase,
-    includeNumbers,
-    includeSymbols,
-  } = json;
+const genPassword = ({ passwordlength, includeUppercase, includeLowercase, includeNumbers, includeSymbols }) => {
+  const length = Number(passwordlength);
 
-  let mixHash = "";
+  let pool = "";
+  let guaranteedChars = [];
 
   if (includeUppercase) {
-    mixHash += uppercaseLetters;
+    pool += chars.upper;
+    guaranteedChars.push(randomChar(chars.upper));
   }
   if (includeLowercase) {
-    mixHash += lowercaseLetters;
+    pool += chars.lower;
+    guaranteedChars.push(randomChar(chars.lower));
   }
   if (includeNumbers) {
-    mixHash += numberCharacters;
+    pool += chars.number;
+    guaranteedChars.push(randomChar(chars.number));
   }
   if (includeSymbols) {
-    mixHash += symbolCharacters;
+    pool += chars.symbol;
+    guaranteedChars.push(randomChar(chars.symbol));
   }
 
-  let password = "";
-  for (let i = 0; i <= Number(length); i++) {
-    const randomIndex = Math.floor(Math.random() * mixHash?.length);
-    password += mixHash[randomIndex];
+  if (!pool) return "";
+
+  let password = [...guaranteedChars];
+
+  while (password.length < length) {
+    password.push(randomChar(pool));
   }
 
-  return password;
+  return password.sort(() => Math.random() - 0.5).join("");
 };
 
+const randomChar = (str) => str[Math.floor(Math.random() * str.length)];
+
 const calPassStrength = (password) => {
-  // password
-  const passwordLength = password?.length;
-  const hasUppercase = /[A-Z]/.test(password);
-  const hasLowercase = /[a-z]/.test(password);
-  const hasNumbers = /[0-9]/.test(password);
-  const hasSymbol = /[!@#$%^&*()-_=+[\]{}|;:,.<>?]/.test(password);
-
-  let strengthScore = 0;
-  strengthScore += Math.min(passwordLength * 2, 40);
-
-  if (hasUppercase) strengthScore += 15;
-  if (hasLowercase) strengthScore += 15;
-  if (hasNumbers) strengthScore += 15;
-  if (hasSymbol) strengthScore += 15;
-
-  if (passwordLength < 8) {
-    strengthScore = Math.min(strengthScore, 40);
+  if (!password) {
+    progressBar.value = 0;
+    strengthLabel.innerText = "Weak";
+    return;
   }
+
+  const length = password.length;
+  const hasUpper = /[A-Z]/.test(password);
+  const hasLower = /[a-z]/.test(password);
+  const hasNum = /[0-9]/.test(password);
+  const hasSym = /[!@#$%^&*()\-_=+\[\]{}|;:,.<>?/]/.test(password);
+
+  let score = 0;
+
+  score += Math.min(length * 2, 40);
+  if (hasUpper) score += 15;
+  if (hasLower) score += 15;
+  if (hasNum) score += 15;
+  if (hasSym) score += 15;
+
+  let label = "Weak";
+  if (score >= 80) label = "Strong";
+  else if (score >= 50) label = "Medium";
+
+  progressBar.value = score;
+  strengthLabel.innerText = label;
 };
 
 passwordGenForm.addEventListener("submit", generateHandler);
