@@ -1,0 +1,62 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  margin: 0px;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+}
+
+h3 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: blue;
+  margin-top: 200px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section div {
+  font-size: 3rem;
+  font-weight: bold;
+  padding: 20px 40px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2);
+  color: #222;
+}
+
+#hrs,
+#min,
+#sec {
+  color: #2e2e2e;
+}
+
+#peroid {
+  margin-left: 15px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #555;
+  text-transform: uppercase;
+}
+
+/* 🔹 Responsive */
+@media (max-width: 600px) {
+  section div {
+    font-size: 2.2rem;
+    padding: 15px 25px;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+}
