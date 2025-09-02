@@ -1,5 +1,5 @@
-// dom elements
-const transactionsContainer = document.getElementById("transactionsContainer");
+// DOM elements
+const transactionList = document.getElementById("transactionList");
 const transactionForm = document.getElementById("transactionForm");
 const balanceEle = document.getElementById("balance");
 const incomeEle = document.getElementById("income");
@@ -8,49 +8,67 @@ const expenseEle = document.getElementById("expenses");
 // variables
 let income = 0;
 let expenses = 0;
-let transactions = [];
+let transactions = JSON.parse(localStorage.getItem("transactions")) || [];
 
-// templates
 class Template {
   getTransactionList(list) {
-    return `<div id="transactionList">
-        <span id="description">${list.description}</span>
-        <span id="amount">${list.amount}</span>
-      </div>`;
+    const type = Number(list.amount) > 0 ? "income" : "expense";
+    const sign = Number(list.amount) > 0 ? "+" : "-";
+    return `
+    <div class="transaction-item ${type}">
+      <span class="description">${list.description}</span>
+      <span class="amount">${sign}$${Math.abs(list.amount)}</span>
+    </div>`;
   }
+
 }
 
 const template = new Template();
 
 const addTransactionHandler = (e) => {
   e.preventDefault();
+
   const formData = new FormData(transactionForm);
   const formJson = Object.fromEntries(formData);
+
   transactions.push(formJson);
+  localStorage.setItem("transactions", JSON.stringify(transactions));
+
   const temp = template.getTransactionList(formJson);
-  transactionsContainer.insertAdjacentHTML("beforeend", temp);
-  if (Number(formJson.amount) > 0) {
-    income += Number(formJson.amount);
-  } else {
-    expenses += Number(formJson.amount);
-  }
-  updateDashboard();
+  transactionList.insertAdjacentHTML("beforeend", temp);
+
+  updateStats(formJson);
   transactionForm.reset();
 };
 
 const renderTransaction = () => {
+  transactionList.innerHTML = "";
+  income = 0;
+  expenses = 0;
+
   transactions.forEach((list) => {
     const temp = template.getTransactionList(list);
-    transactionsContainer.insertAdjacentHTML("beforeend", temp);
+    transactionList.insertAdjacentHTML("beforeend", temp);
+    updateStats(list);
   });
 };
 
 const updateDashboard = () => {
-  balanceEle.innerText = expenses + income;
+  balanceEle.innerText = income - expenses;
   incomeEle.innerText = income;
   expenseEle.innerText = expenses;
 };
 
-// trigers
+const updateStats = (transaction) => {
+  const amount = Number(transaction.amount);
+  if (amount > 0) {
+    income += amount;
+  } else {
+    expenses += Math.abs(amount);
+  }
+  updateDashboard();
+};
+
+// triggers
 window.addEventListener("DOMContentLoaded", renderTransaction);
 transactionForm.addEventListener("submit", addTransactionHandler);

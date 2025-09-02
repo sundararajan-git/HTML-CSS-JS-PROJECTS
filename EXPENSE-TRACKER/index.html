@@ -3,56 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
     <title>Expense Tracker</title>
   </head>
   <body>
-    <h3>Expense Tracker</h3>
-    <p>You Balance</p>
-    <p id="balance">0</p>
-
-    <br />
-    <div id="incomeContainer">
-      <span>Income</span>
-      <span id="income">0</span>
-    </div>
-
-    <br />
-
-    <div id="expensesContainer">
-      <span>Expenses</span>
-      <span id="expenses">0</span>
-    </div>
-
-    <br />
-
-    <div id="transactionsContainer"></div>
-
-    <br />
-
-    <form name="transactionForm" id="transactionForm">
-      <div class="field">
-        <label for="description">Description</label>
-        <input
-          type="text"
-          id="description"
-          name="description"
-          placeholder="Enter Description"
-          required
-        />
+    <p class="heading">Expense Tracker</p>
+    <div class="container">
+      <div class="left-panel">
+        <p class="subHeading">Transactions</p>
+        <div id="transactionList"></div>
       </div>
-      <div class="field">
-        <label for="amount">Amount</label>
-        <input
-          type="number"
-          id="amount"
-          name="amount"
-          placeholder="Enter Amount"
-          required
-        />
-      </div>
-      <button type="submit">Add Transaction</button>
-    </form>
 
+      <div class="right-panel">
+        <div class="balance-section">
+          <p class="subHeading">Balance</p>
+          <p id="balance">$0</p>
+        </div>
+
+        <div class="summary-container">
+          <div>
+            <p class="subHeading">Income</p>
+            <p id="income">$0</p>
+          </div>
+          <div>
+            <p class="subHeading">Expenses</p>
+            <p id="expenses">$0</p>
+          </div>
+        </div>
+
+        <form id="transactionForm">
+          <p class="subHeading">Add Transaction</p>
+          <input
+            type="text"
+            id="text"
+            name="description"
+            placeholder="Enter description"
+            required
+          />
+          <input
+            type="number"
+            id="amount"
+            name="amount"
+            placeholder="Enter amount ( -ve for expense )"
+            required
+          />
+          <button type="submit">Add</button>
+        </form>
+      </div>
+    </div>
     <script src="./script.js"></script>
   </body>
 </html>
