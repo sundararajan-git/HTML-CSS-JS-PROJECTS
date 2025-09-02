@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+form#passwordGenForm {
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+form p {
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#password {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+#passwordContainer {
+  background: #f4f4f4;
+  padding: 12px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  font-size: 0.8rem;
+  border: 2px dashed #6a11cb;
+  color: #222;
+  word-wrap: break-word;
+}
+
+#field {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#field label {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+#field input[type="range"] {
+  width: 150px;
+  cursor: pointer;
+}
+
+#field input[type="checkbox"] {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+button[type="submit"] {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: #fff;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+#passwordStrengthContainer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+#passwordStrengthContainer label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #444;
+}
+
+progress {
+  width: 100%;
+  height: 12px;
+  border-radius: 8px;
+  overflow: hidden;
+  appearance: none;
+}
+
+progress::-webkit-progress-bar {
+  background-color: #eee;
+  border-radius: 8px;
+}
+
+progress::-webkit-progress-value {
+  background: linear-gradient(to right, #ff4b2b, #ff416c, #ff9a00, #38ef7d);
+  border-radius: 8px;
+}
+
+progress::-moz-progress-bar {
+  background: linear-gradient(to right, #ff4b2b, #ff416c, #ff9a00, #38ef7d);
+  border-radius: 8px;
+}
