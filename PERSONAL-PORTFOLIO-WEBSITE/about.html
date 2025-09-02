@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- styles -->
+    <link rel="styleSheet" href="assets/css/style.css" />
+    <!-- fonts -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>About</title>
+    <!-- tailwind css -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- script files -->
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body>
+    <header id="navBar"></header>
+    <main class="flex flex-col gap-8 p-4 h-full overflow-auto">
+      <div class="flex flex-col gap-4">
+        <p
+          class="flex items-center gap-1.5 bg-red-50 text-orange-600 w-fit px-2 py-1 text-sm rounded-[5px]"
+        >
+          <i class="fa-solid fa-user fa-sm"></i>
+          <span>Who am I ?</span>
+        </p>
+        <p class="text-lg font-medium">About Me</p>
+        <div class="flex gap-6 item-center">
+          <image src="./assets/images/pic.png" class="w-[25%] rounded-md" />
+          <div class="flex flex-col gap-4">
+            <div class="flex flex-col gap-2 px-6 py-4 rounded-md">
+              <p class="text-lg font-medium">Bio</p>
+              <p class="leading-8 text-justify text-gray-700">
+                I am Max David, Software Engineer from Chennai. I have rich
+                experience in software development, system design, and building
+                scalable web applications. I am skilled in full-stack
+                development, problem solving, and modern technologies, with a
+                passion for creating efficient and user-friendly solutions
+              </p>
+            </div>
+            <div class="grid grid-cols-2 gap-4 px-6 py-2 rounded-md w-full">
+              <li
+                class="w-full list-none flex items-center justify-between p-2"
+              >
+                <span>Age</span>
+                <span class="text-gray-600">28</span>
+              </li>
+              <li
+                class="w-full list-none flex items-center justify-between p-2"
+              >
+                <span>Email</span>
+                <span class="text-gray-600">maxdavid@gmail.com</span>
+              </li>
+              <li
+                class="w-full list-none flex items-center justify-between p-2"
+              >
+                <span>Residence</span>
+                <span class="text-gray-600">India</span>
+              </li>
+              <li
+                class="w-full list-none flex items-center justify-between p-2"
+              >
+                <span>Phone</span>
+                <span class="text-gray-600">+91 8128133743</span>
+              </li>
+            </div>
+            <div class="px-6 py-4">
+              <button
+                type="button"
+                class="px-4 py-2 text-white bg-orange-600 text-sm rounded-[5px] flex items-center gap-2"
+              >
+                <i class="fa-solid fa-arrow-down fa-sm"></i>
+                Download CV
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="text-gray-100" />
+      <div class="flex flex-col gap-4">
+        <p
+          class="flex items-center gap-1.5 bg-red-50 text-orange-600 w-fit px-2 py-1 text-sm rounded-[5px]"
+        >
+          <i class="fa-solid fa-trophy fa-sm"></i>
+          <span>Achievements</span>
+        </p>
+        <p class="text-lg font-medium">Fun Fcats</p>
+        <div class="flex items-center gap-12 justify-around w-full px-4">
+          <div class="flex gap-6 items-center shadow p-4 rounded-lg w-full">
+            <i class="fa-solid fa-box fa-xl text-blue-600"></i>
+            <div class="flex flex-col gap-2 items-start">
+              <span class="text-xl font-semibold">205</span>
+              <span class="text-gray-700">Projects Finished</span>
+            </div>
+          </div>
+          <div class="flex gap-6 items-center shadow p-4 rounded-lg w-full">
+            <i class="fa-solid fa-face-smile fa-xl text-pink-600"></i>
+            <div class="flex flex-col gap-2 items-start">
+              <span class="text-xl font-semibold">507</span>
+              <span class="text-gray-700">Happy Customers</span>
+            </div>
+          </div>
+          <div class="flex gap-6 items-center shadow p-4 rounded-lg w-full">
+            <i class="fa-solid fa-gift fa-xl text-green-600"></i>
+            <div class="flex flex-col gap-2 items-start">
+              <span class="text-xl font-semibold">37</span>
+              <span class="text-gray-700">Awards Winner</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col gap-4 mt-4">
+        <p
+          class="flex items-center gap-1.5 bg-red-50 text-orange-600 w-fit px-2 py-1 text-sm rounded-[5px]"
+        >
+          <i class="fa-solid fa-chart-simple fa-sm"></i>
+          <span>What can I do?</span>
+        </p>
+        <p class="text-lg font-medium">My Skills</p>
+        <div class="grid grid-cols-2 gap-6 space-y-4 py-6">
+          <div class="flex flex-col gap-4 w-full">
+            <div class="flex justify-between items-center gap-2">
+              <span>Javascript</span>
+              <span class="text-gray-600">75%</span>
+            </div>
+            <div class="w-full bg-blue-100 rounded-[2px] h-2 overflow-hidden">
+              <div
+                class="bg-blue-600 h-2 rounded-[2px] w-[75%] transition-all duration-500"
+              ></div>
+            </div>
+          </div>
+          <div class="flex flex-col gap-4 w-full">
+            <div class="flex justify-between items-center gap-2">
+              <span>Python</span>
+              <span class="text-gray-600">70%</span>
+            </div>
+            <div class="w-full bg-green-100 rounded-[2px] h-2 overflow-hidden">
+              <div
+                class="bg-green-600 h-2 rounded-[2px] w-[70%] transition-all duration-500"
+              ></div>
+            </div>
+          </div>
+          <div class="flex flex-col gap-4 w-full">
+            <div class="flex justify-between items-center gap-2">
+              <span>Java</span>
+              <span class="text-gray-600">60%</span>
+            </div>
+            <div class="w-full bg-pink-100 rounded-[2px] h-2 overflow-hidden">
+              <div
+                class="bg-pink-600 h-2 rounded-[2px] w-[70%] transition-all duration-500"
+              ></div>
+            </div>
+          </div>
+          <div class="flex flex-col gap-4 w-full">
+            <div class="flex justify-between items-center gap-2">
+              <span>React</span>
+              <span class="text-gray-600">80%</span>
+            </div>
+            <div class="w-full bg-purple-100 rounded-[2px] h-2 overflow-hidden">
+              <div
+                class="bg-purple-600 h-2 rounded-[2px] w-[80%] transition-all duration-500"
+              ></div>
+            </div>
+          </div>
+          <div class="flex flex-col gap-4 w-full">
+            <div class="flex justify-between items-center gap-2">
+              <span>Figma</span>
+              <span class="text-gray-600">50%</span>
+            </div>
+            <div class="w-full bg-gray-100 rounded-[2px] h-2 overflow-hidden">
+              <div
+                class="bg-black h-2 rounded-[2px] w-[50%] transition-all duration-500"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

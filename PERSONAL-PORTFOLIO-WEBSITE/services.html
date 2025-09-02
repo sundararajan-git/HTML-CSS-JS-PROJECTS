@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- styles -->
+    <link rel="styleSheet" href="assets/css/style.css" />
+    <!-- fonts -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Service</title>
+    <!-- tailwind css -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- script files -->
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body>
+    <header id="navBar"></header>
+    <main class="flex flex-col gap-8 p-4 h-full overflow-auto">
+      <div class="flex flex-col gap-4">
+        <p
+          class="flex items-center gap-1.5 bg-red-50 text-orange-600 w-fit px-2 py-1 text-sm rounded-[5px]"
+        >
+          <i class="fa-solid fa-user fa-sm"></i>
+          <span>What do I do?</span>
+        </p>
+        <p class="text-lg font-medium">Services</p>
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+          <div class="flex flex-col gap-2 p-4 shadow rounded-lg">
+            <span class="px-3 py-2 rounded-md bg-gray-50 w-fit mb-4">
+              <i class="fa-solid fa-code"></i>
+            </span>
+            <p>Web Application Development</p>
+            <p class="text-gray-500 text-sm text-pretty w-[90%]">
+              Building modern, scalable, and high-performance web applications
+              tailored to business needs.
+            </p>
+          </div>
+          <div class="flex flex-col gap-2 p-4 shadow rounded-lg">
+            <span
+              class="px-3 py-2 rounded-md bg-sky-100 w-fit text-sky-600 mb-4"
+            >
+              <i class="fa-solid fa-server"></i>
+            </span>
+            <p>Backend Development</p>
+            <p class="text-gray-500 text-sm text-pretty w-[90%]">
+              Designing and developing secure, efficient, and scalable
+              server-side systems with APIs and databases.
+            </p>
+          </div>
+          <div class="flex flex-col gap-2 p-4 shadow rounded-lg">
+            <span
+              class="px-3 py-2 rounded-md bg-pink-100 w-fit text-pink-600 mb-4"
+            >
+              <i class="fa-solid fa-laptop-code"></i>
+            </span>
+            <p>Frontend Development</p>
+            <p class="text-gray-500 text-sm text-pretty w-[90%]">
+              Creating responsive, user-friendly, and visually appealing
+              interfaces with the latest technologies.
+            </p>
+          </div>
+
+          <div class="flex flex-col gap-2 p-4 shadow rounded-lg">
+            <span
+              class="px-3 py-2 rounded-md bg-blue-100 w-fit text-blue-600 mb-4"
+            >
+              <i class="fa-solid fa-database"></i>
+            </span>
+            <p>Database Design & Management</p>
+            <p class="text-gray-500 text-sm text-pretty w-[90%]">
+              Structuring, optimizing, and managing databases for reliability
+              and performance.
+            </p>
+          </div>
+
+          <div class="flex flex-col gap-2 p-4 shadow rounded-lg">
+            <span
+              class="px-3 py-2 rounded-md bg-purple-100 w-fit text-purple-600 mb-4"
+            >
+              <i class="fa-solid fa-diagram-project"></i>
+            </span>
+            <p>Software Architecture &</p>
+            <p class="text-gray-500 text-sm text-pretty w-[90%]">
+              System Design Planning and implementing robust architectures to
+              ensure scalability and maintainability.
+            </p>
+          </div>
+          <div class="flex flex-col gap-2 p-4 shadow rounded-lg">
+            <span
+              class="px-3 py-2 rounded-md bg-green-100 w-fit text-green-600 mb-4"
+            >
+              <i class="fa-solid fa-plug"></i>
+            </span>
+            <p>API Development & Integration</p>
+            <p class="text-gray-500 text-sm text-pretty w-[90%]">
+              Building and integrating RESTful & GraphQL APIs for seamless
+              system communication.
+            </p>
+          </div>
+        </div>
+      </div>
+      <hr class="text-gray-100" />
+      <div class="flex flex-col gap-4">
+        <p
+          class="flex items-center gap-1.5 bg-red-50 text-orange-600 w-fit px-2 py-1 text-sm rounded-[5px]"
+        >
+          <i class="fa-solid fa-trophy fa-sm"></i>
+          <span>What say my clients</span>
+        </p>
+        <p class="text-lg font-medium">Testimonials</p>
+        <div class="flex items-center gap-8 w-[90%] mx-auto">
+          <div
+            class="border border-gray-200 rounded-full px-1.5 py-1 h-fit hover:cursor-pointer"
+          >
+            <i class="fa-solid fa-angle-left"></i>
+          </div>
+          <div class="flex flex-col items-center gap-4">
+            <div
+              class="w-20 h-20 rounded-full overflow-hidden ring-2 ring-orange-600 ring-offset-2"
+            >
+              <image src="./assets//images/pic.png" class="" />
+            </div>
+            <div class="flex flex-col gap-2 items-center">
+              <span class="font-medium">John Wick</span>
+              <span class="text-sm text-gray-500">CEO of Netflix</span>
+            </div>
+            <div class="p-4 shadow rounded-md w-[80%] mx-auto">
+              <p class="text-gray-500 text-justify">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque
+                numquam accusantium quia. Similique hic asperiores vel inventore
+                temporibus cupiditate veritatis quam consequatur ab, laboriosam
+                doloribus architecto iure accusantium deserunt illo!
+              </p>
+            </div>
+          </div>
+          <div
+            class="border border-gray-200 rounded-full px-1.5 py-1 h-fit hover:cursor-pointer"
+          >
+            <i class="fa-solid fa-angle-right"></i>
+          </div>
+        </div>
+        <div class="flex items-center justify-center gap-4">
+          <div
+            class="p-2 border border-gray-200 rounded-full flex hover:cursor-pointer"
+          >
+            <span class="w-1 h-1 bg-black rounded-full"></span>
+          </div>
+          <div
+            class="p-2 border border-gray-200 rounded-full flex hover:cursor-pointer"
+          >
+            <span class="w-1 h-1 bg-black rounded-full"></span>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col gap-4 mt-4">
+        <p
+          class="flex items-center gap-1.5 bg-red-50 text-orange-600 w-fit px-2 py-1 text-sm rounded-[5px]"
+        >
+          <i class="fa-solid fa-chart-simple fa-sm"></i>
+          <span>Choose the plan</span>
+        </p>
+        <p class="text-lg font-medium">Plans</p>
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8 py-6">
+          <div
+            class="flex flex-col gap-4 space-y-3 w-full p-6 rounded-md shadow"
+          >
+            <div class="flex items-center gap-1">
+              <span>$</span>
+              <span class="text-5xl font-semibold">29</span>
+            </div>
+            <div class="space-y-3">
+              <p class="text-xl font-meidum">Personal</p>
+              <p class="text-justify text-gray-500 text-sm">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+                consectetur nisi quibusdam dolorem tempora cupiditate, possimus
+                adipisci vero id magnam quisquam cumque ex commodi nemo
+                reprehenderit animi dolores error laborum.
+              </p>
+            </div>
+
+            <button
+              type="button"
+              class="p-3 rounded-full bg-red-100 text-orange-600 font-medium text-sm hover:cursor-pointer w-[80%] mx-auto hover:scale-95"
+            >
+              Get Started
+            </button>
+            <ul class="flex flex-col gap-4 text-sm text-gray-700">
+              <li class="flex items-center gap-3">
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <span> 1 Year of Updates </span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <span> Reqular Support </span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <span> White Labeling </span>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="flex flex-col gap-4 space-y-3 w-full p-6 rounded-md shadow relative"
+          >
+            <div
+              class="absolute bg-orange-600 text-white px-2 py-1 text-xs rounded-l-md top-5 right-0"
+            >
+              <i class="fa-solid fa-star fa-xs"></i>
+              Most Popular
+            </div>
+            <div class="flex items-center gap-1">
+              <span>$</span>
+              <span class="text-5xl font-semibold">49</span>
+            </div>
+            <div class="space-y-3">
+              <p class="text-xl font-meidum">Business</p>
+              <p class="text-justify text-gray-500 text-sm">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+                consectetur nisi quibusdam dolorem tempora cupiditate, possimus
+                adipisci vero id magnam quisquam cumque ex commodi nemo
+                reprehenderit animi dolores error laborum.
+              </p>
+            </div>
+
+            <button
+              type="button"
+              class="p-3 rounded-full bg-red-100 text-orange-600 font-medium text-sm hover:cursor-pointer w-[80%] mx-auto hover:scale-95"
+            >
+              Get Started
+            </button>
+            <ul class="flex flex-col gap-4 text-sm text-gray-700">
+              <li class="flex items-center gap-3">
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <span> 2 Year of Updates </span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <span> Permium Support </span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <span> White Labeling </span>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="flex flex-col gap-4 space-y-3 w-full p-6 rounded-md shadow"
+          >
+            <div class="flex items-center gap-1">
+              <span>$</span>
+              <span class="text-5xl font-semibold">99</span>
+            </div>
+            <div class="space-y-3">
+              <p class="text-xl font-meidum">Enterprise</p>
+              <p class="text-justify text-gray-500 text-sm">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+                consectetur nisi quibusdam dolorem tempora cupiditate, possimus
+                adipisci vero id magnam quisquam cumque ex commodi nemo
+                reprehenderit animi dolores error laborum.
+              </p>
+            </div>
+
+            <button
+              type="button"
+              class="p-3 rounded-full bg-red-100 text-orange-600 font-medium text-sm hover:cursor-pointer w-[80%] mx-auto hover:scale-95"
+            >
+              Get Started
+            </button>
+            <ul class="flex flex-col gap-4 text-sm text-gray-700">
+              <li class="flex items-center gap-3">
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <span> Lifetime Updates </span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <span> Live chat Support </span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <span> White Labeling </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
