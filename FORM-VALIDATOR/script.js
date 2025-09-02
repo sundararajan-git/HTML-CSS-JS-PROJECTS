@@ -10,7 +10,8 @@ const formHandler = (e) => {
   const formData = new FormData(signUpForm);
   const formJson = Object.fromEntries(formData);
   console.log(formJson);
-  alert("Successfully submitted");
+  alert("Successfully submitted 🥳🥳🥳");
+  signUpForm.reset()
 };
 
 const formValidation = (form) => {
