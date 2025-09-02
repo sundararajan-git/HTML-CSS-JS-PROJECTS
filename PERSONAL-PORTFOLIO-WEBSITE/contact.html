@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- styles -->
+    <link rel="styleSheet" href="assets/css/style.css" />
+    <!-- fonts -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Personal Portfolio</title>
+    <!-- tailwind css -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- script files -->
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body>
+    <title>Contact</title>
+    <header id="navBar"></header>
+    <main class="bg-gray-50">
+      <section id="contact" class="py-12">
+        <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-10">
+          <div class="space-y-6">
+            <h2 class="text-2xl font-bold text-gray-800">Get in Touch</h2>
+            <p class="text-gray-600">
+              I’d love to hear from you! Whether you have a project in mind, a
+              question, or just want to say hello, feel free to reach out.
+            </p>
+
+            <div class="space-y-4">
+              <div class="flex items-center gap-3">
+                <i class="fa-solid fa-envelope text-orange-600 text-lg"></i>
+                <span class="text-gray-700">maxdavid@gmail.com</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <i class="fa-solid fa-phone text-orange-600 text-lg"></i>
+                <span class="text-gray-700">+91 8128133743</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <i class="fa-solid fa-location-dot text-orange-600 text-lg"></i>
+                <span class="text-gray-700">Tamil nadu, India</span>
+              </div>
+            </div>
+
+            <div class="flex gap-4 mt-6">
+              <a href="#" class="text-gray-500 hover:text-orange-600 text-xl">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="#" class="text-gray-500 hover:text-orange-600 text-xl">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+              <a href="#" class="text-gray-500 hover:text-orange-600 text-xl">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="bg-white shadow rounded-lg p-6">
+            <form action="#" class="space-y-4">
+              <div>
+                <label class="block text-sm font-medium text-gray-700"
+                  >Name</label
+                >
+                <input
+                  type="text"
+                  placeholder="Your Name"
+                  class="w-full mt-1 p-2 border rounded-md focus:ring-orange-500 focus:border-orange-500"
+                />
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  placeholder="Your Email"
+                  class="w-full mt-1 p-2 border rounded-md focus:ring-orange-500 focus:border-orange-500"
+                />
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700"
+                  >Message</label
+                >
+                <textarea
+                  rows="4"
+                  placeholder="Your Message"
+                  class="w-full mt-1 p-2 border rounded-md focus:ring-orange-500 focus:border-orange-500"
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="w-full bg-orange-600 text-white py-2 rounded-md hover:bg-orange-700 transition"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

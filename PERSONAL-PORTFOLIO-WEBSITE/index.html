@@ -1,0 +1,88 @@
+<!-- 
+This project is inspired from this url https://riono.netlify.app/# 
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- styles -->
+    <link rel="styleSheet" href="assets/css/style.css" />
+    <!-- fonts -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Personal Portfolio</title>
+    <!-- tailwind css -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- script files -->
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body>
+    <header id="navBar" class="hidden md:block"></header>
+    <section class="md:hidden flex items-center justify-between pb-4 relative">
+      <div>
+        <p class="font-semibold">PORTFOLIO</p>
+      </div>
+      <div>
+        <button id="menuBtn" class="hover:curosr-pointer">
+          <i class="fa-solid fa-bars fa-lg"></i>
+        </button>
+      </div>
+      <div
+        id="mobileNavBar"
+        class="absolute top-0 right-0 bg-white z-50 w-[80%] h-[100vh] hidden"
+      ></div>
+    </section>
+    <main class="flex flex-col gap-2 p-4 h-full relative">
+      <image
+        src="./assets/images/pic.png"
+        class="absolute w-[25%] right-[2%] top-[20%] rounded-md"
+      />
+      <div class="flex items-center justify-end gap-8">
+        <div class="flex items-center gap-2">
+          <span class="text-orange-600">
+            <i class="fa-solid fa-mobile"></i>
+          </span>
+          <span>+91 8128133743</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="text-orange-600">
+            <i class="fa-solid fa-envelope"></i>
+          </span>
+          <span>maxdavid@gmail.com</span>
+        </div>
+      </div>
+      <div class="flex flex-col gap-8 pt-32 relative">
+        <h3 class="text-xl">👋 HELLO !</h3>
+        <h2 class="text-3xl font-semibold">I'm Max David.</h2>
+        <p class="leading-8 text-gray-800 w-[70%] text-justify">
+          I am Max David, Software Engineer from Chennai. I have rich experience
+          in software development, system design, and building scalable web
+          applications. I am skilled in full-stack development, problem solving,
+          and modern technologies, with a passion for creating efficient and
+          user-friendly solutions
+        </p>
+        <div class="flex items-center gap-6">
+          <button
+            type="button"
+            class="bg-orange-600 px-4 py-2 text-white rounded-md text-sm"
+          >
+            Hire Me
+          </button>
+          <button
+            type="button"
+            class="flex items-center gap-2 hover:text-orange-600 hover:cursor-pointer text-gray-700 text-sm"
+          >
+            <span>View works </span>
+          </button>
+        </div>
+        <!-- <div></div> -->
+      </div>
+    </main>
+  </body>
+</html>
