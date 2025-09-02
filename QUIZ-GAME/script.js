@@ -23,11 +23,11 @@ class Templates {
         </div>
         <div id="radioContainer">
         ${quizs[currentQuestionIndex].answers
-          .map((item) => {
-            return `<input type="radio" id=${item.text} name="answer" />
+        .map((item) => {
+          return `<input type="radio" id=${item.text} name="answer" />
           <label for=${item.text}>${item.text}</label>`;
-          })
-          .join(" ")}
+        })
+        .join(" ")}
         </div>
         <div id="progressContainer">
           <progress value=${score} max=${quizs.length}></progress>
