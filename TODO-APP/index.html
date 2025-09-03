@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
     <title>Todo App</title>
-</head>
-<body>
-    <h3>Todo App</h3>
-    <form id="todoForm">
-        <input type="text" placeholder="" />
-    </form>
-    <script src="./script.js""></script>
-</body>
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <h3>Todo App</h3>
+      <form id="todoForm">
+        <input type="text" name="name" placeholder="list.." />
+        <button type="submit">Submit</button>
+      </form>
+      <div id="todoList"></div>
+    </div>
+  </body>
 </html>
