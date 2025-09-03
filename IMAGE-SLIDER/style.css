@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  jusstify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+h3 {
+  margin: 10% 0%;
+}
+
+#container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+
+#container img {
+  border-radius: 10px;
+  width: 600px;
+  animation: slideLeft 2s;
+}
+
+#container button {
+  border: 1px solid #d0d0d0ff;
+  border-radius: 100%;
+  padding: 4px;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-contnet: center;
+}
+
+#container button:hover {
+  transform: scale(1.1);
+}
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(-5);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
