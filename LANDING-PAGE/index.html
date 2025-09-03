@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced Landing Page</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="shape shape1"></div>
+    <div class="shape shape2"></div>
+    <div class="shape shape3"></div>
+
+    <header>
+      <nav class="navbar">
+        <div class="logo">MyBrand</div>
+        <ul class="nav-links">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="cta-btn">Sign Up</button>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-content fade-up">
+        <h1>Build Amazing Projects Quickly</h1>
+        <p>Launch your ideas faster with stunning templates and smart tools.</p>
+        <button class="cta-btn" id="heroBtn">Get Started</button>
+      </div>
+      <div class="hero-image fade-up">
+        <img
+          src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Hero Image"
+        />
+      </div>
+    </section>
+
+    <section id="features" class="features">
+      <h2 class="fade-up">Features</h2>
+      <div class="feature-cards">
+        <div class="card fade-left">
+          <h3>Fast & Easy</h3>
+          <p>Start in minutes with ready-to-use templates and guides.</p>
+        </div>
+        <div class="card fade-up">
+          <h3>Responsive Design</h3>
+          <p>Looks perfect on desktop, tablet, and mobile devices.</p>
+        </div>
+        <div class="card fade-right">
+          <h3>Customizable</h3>
+          <p>Tweak colors, fonts, and layout to match your brand.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+      <h2 class="fade-up">What Our Users Say</h2>
+      <div class="testimonial-cards">
+        <div class="card fade-left">
+          <p>"This platform saved me hours! Highly recommended."</p>
+          <h4>- Jane Doe</h4>
+        </div>
+        <div class="card fade-up">
+          <p>"Beautiful templates and super easy to customize."</p>
+          <h4>- John Smith</h4>
+        </div>
+        <div class="card fade-right">
+          <p>"Perfect for startups and freelancers."</p>
+          <h4>- Alex Lee</h4>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2 class="fade-up">Contact Us</h2>
+      <form id="contactForm" class="fade-up">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea
+          name="message"
+          placeholder="Your Message"
+          rows="5"
+          required
+        ></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <p id="formMsg"></p>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 MyBrand. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
