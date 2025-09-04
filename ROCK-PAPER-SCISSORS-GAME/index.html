@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Rock Paper Scissors</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./script.js" defer></script>
+  </head>
+  <body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md text-center">
+      <h1 class="text-2xl font-bold mb-4">✊ Rock Paper Scissors ✋</h1>
+
+      <!-- Score -->
+      <div class="flex justify-around mb-4 text-lg font-semibold">
+        <p>Player: <span id="playerScore">0</span></p>
+        <p>Computer: <span id="computerScore">0</span></p>
+      </div>
+
+      <!-- Buttons -->
+      <div class="flex justify-around mb-4">
+        <button
+          class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition"
+          onclick="play('rock')"
+        >
+          ✊ Rock
+        </button>
+        <button
+          class="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 transition"
+          onclick="play('paper')"
+        >
+          ✋ Paper
+        </button>
+        <button
+          class="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600 transition"
+          onclick="play('scissors')"
+        >
+          ✌️ Scissors
+        </button>
+      </div>
+
+      <p id="resultText" class="text-gray-700 font-semibold text-lg"></p>
+    </div>
+  </body>
+</html>
