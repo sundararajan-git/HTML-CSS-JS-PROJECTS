@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Mini Netflix UI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./script.js" defer></script>
+  </head>
+  <body class="bg-gray-900 text-white">
+    <!-- Header -->
+    <header
+      class="bg-gray-900 p-4 flex justify-between items-center shadow-md fixed w-full z-20"
+    >
+      <h1 class="text-2xl font-bold text-red-600">MiniNetflix</h1>
+      <nav class="space-x-4">
+        <a href="#" class="hover:underline">Home</a>
+        <a href="#" class="hover:underline">Movies</a>
+        <a href="#" class="hover:underline">Series</a>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-24 max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl font-bold mb-4">Popular Movies</h2>
+
+      <div
+        class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4"
+      >
+        <!-- Movie Card Example -->
+        <div class="relative movie-card rounded overflow-hidden">
+          <img
+            src="https://via.placeholder.com/300x450"
+            alt="Movie 1"
+            class="w-full h-full object-cover"
+          />
+          <div class="movie-title">Movie 1</div>
+        </div>
+
+        <div class="relative movie-card rounded overflow-hidden">
+          <img
+            src="https://via.placeholder.com/300x450"
+            alt="Movie 2"
+            class="w-full h-full object-cover"
+          />
+          <div class="movie-title">Movie 2</div>
+        </div>
+
+        <div class="relative movie-card rounded overflow-hidden">
+          <img
+            src="https://via.placeholder.com/300x450"
+            alt="Movie 3"
+            class="w-full h-full object-cover"
+          />
+          <div class="movie-title">Movie 3</div>
+        </div>
+
+        <div class="relative movie-card rounded overflow-hidden">
+          <img
+            src="https://via.placeholder.com/300x450"
+            alt="Movie 4"
+            class="w-full h-full object-cover"
+          />
+          <div class="movie-title">Movie 4</div>
+        </div>
+
+        <div class="relative movie-card rounded overflow-hidden">
+          <img
+            src="https://via.placeholder.com/300x450"
+            alt="Movie 5"
+            class="w-full h-full object-cover"
+          />
+          <div class="movie-title">Movie 5</div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
