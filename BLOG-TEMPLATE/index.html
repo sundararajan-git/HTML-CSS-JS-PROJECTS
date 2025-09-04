@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Static Blog Template</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./script.js" defer></script>
+  </head>
+  <body class="bg-gray-100">
+    <!-- Header -->
+    <header class="bg-blue-500 text-white py-6 shadow">
+      <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
+        <h1 class="text-3xl font-bold">My Blog</h1>
+        <nav class="space-x-4">
+          <a href="#" class="hover:underline">Home</a>
+          <a href="#" class="hover:underline">About</a>
+          <a href="#" class="hover:underline">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-blue-100 py-12">
+      <div class="max-w-6xl mx-auto px-4 text-center">
+        <h2 class="text-4xl font-bold mb-4">Welcome to My Blog</h2>
+        <p class="text-gray-700">
+          A place where I share articles about web development, coding tips, and
+          tutorials.
+        </p>
+      </div>
+    </section>
+
+    <!-- Blog Cards -->
+    <section
+      class="max-w-6xl mx-auto px-4 py-12 grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+    >
+      <div
+        class="bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden"
+      >
+        <img
+          src="https://via.placeholder.com/400x200"
+          alt="Blog 1"
+          class="w-full h-48 object-cover"
+        />
+        <div class="p-4">
+          <h3 class="text-xl font-bold mb-2">
+            Understanding JavaScript Closures
+          </h3>
+          <p class="text-gray-600 mb-2">
+            Learn how closures work in JavaScript and how to use them
+            effectively in your projects.
+          </p>
+          <a href="#" class="text-blue-500 font-semibold hover:underline"
+            >Read More →</a
+          >
+        </div>
+      </div>
+
+      <div
+        class="bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden"
+      >
+        <img
+          src="https://via.placeholder.com/400x200"
+          alt="Blog 2"
+          class="w-full h-48 object-cover"
+        />
+        <div class="p-4">
+          <h3 class="text-xl font-bold mb-2">CSS Grid vs Flexbox</h3>
+          <p class="text-gray-600 mb-2">
+            A comparative guide to help you decide when to use CSS Grid and when
+            Flexbox is more appropriate.
+          </p>
+          <a href="#" class="text-blue-500 font-semibold hover:underline"
+            >Read More →</a
+          >
+        </div>
+      </div>
+
+      <div
+        class="bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden"
+      >
+        <img
+          src="https://via.placeholder.com/400x200"
+          alt="Blog 3"
+          class="w-full h-48 object-cover"
+        />
+        <div class="p-4">
+          <h3 class="text-xl font-bold mb-2">React Hooks Explained</h3>
+          <p class="text-gray-600 mb-2">
+            An in-depth look at React Hooks including useState, useEffect, and
+            custom hooks.
+          </p>
+          <a href="#" class="text-blue-500 font-semibold hover:underline"
+            >Read More →</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6 mt-12">
+      <div class="max-w-6xl mx-auto px-4 text-center">
+        <p>&copy; 2025 My Blog. All rights reserved.</p>
+        <div class="mt-2 space-x-4">
+          <a href="#" class="hover:underline">Privacy Policy</a>
+          <a href="#" class="hover:underline">Terms of Service</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
