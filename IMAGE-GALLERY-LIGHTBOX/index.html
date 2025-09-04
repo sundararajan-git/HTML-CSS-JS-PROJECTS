@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.js" />
+    <title>Image Gallery with Lightbox</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./script.js" defer></script>
+  </head>
+  <body class="bg-gray-100 flex flex-col items-center p-6">
+    <h1 class="text-3xl font-bold mb-6">🖼️ Image Gallery</h1>
+
+    <!-- Gallery Grid -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 max-w-4xl">
+      <img
+        src="https://via.placeholder.com/300x200?text=1"
+        alt="Image 1"
+        class="cursor-pointer rounded shadow hover:scale-105 transition"
+        onclick="openLightbox(this)"
+      />
+      <img
+        src="https://via.placeholder.com/300x200?text=2"
+        alt="Image 2"
+        class="cursor-pointer rounded shadow hover:scale-105 transition"
+        onclick="openLightbox(this)"
+      />
+      <img
+        src="https://via.placeholder.com/300x200?text=3"
+        alt="Image 3"
+        class="cursor-pointer rounded shadow hover:scale-105 transition"
+        onclick="openLightbox(this)"
+      />
+      <img
+        src="https://via.placeholder.com/300x200?text=4"
+        alt="Image 4"
+        class="cursor-pointer rounded shadow hover:scale-105 transition"
+        onclick="openLightbox(this)"
+      />
+      <img
+        src="https://via.placeholder.com/300x200?text=5"
+        alt="Image 5"
+        class="cursor-pointer rounded shadow hover:scale-105 transition"
+        onclick="openLightbox(this)"
+      />
+      <img
+        src="https://via.placeholder.com/300x200?text=6"
+        alt="Image 6"
+        class="cursor-pointer rounded shadow hover:scale-105 transition"
+        onclick="openLightbox(this)"
+      />
+    </div>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="flex" onclick="closeLightbox()">
+      <img id="lightboxImg" src="" alt="Lightbox Image" />
+    </div>
+  </body>
+</html>
