@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.js" />
+    <title>File Upload UI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./script.js" defer></script>
+  </head>
+  <body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md text-center">
+      <h1 class="text-2xl font-bold mb-4">📁 Upload Your Files</h1>
+
+      <div
+        class="border-4 border-dashed border-gray-300 rounded-lg p-10 mb-4 hover:border-blue-400 transition cursor-pointer"
+      >
+        <svg
+          class="mx-auto mb-3 w-12 h-12 text-gray-400"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 16v-4a4 4 0 014-4h4m4 4v4a4 4 0 01-4 4H8m4-4V4"
+          ></path>
+        </svg>
+        <p class="text-gray-500 mb-2">Drag and drop files here</p>
+        <p class="text-gray-400 text-sm">or</p>
+        <button
+          class="mt-2 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition"
+        >
+          Browse Files
+        </button>
+      </div>
+
+      <p class="text-gray-400 text-sm">
+        Supported formats: JPG, PNG, PDF. Max size: 10MB
+      </p>
+    </div>
+  </body>
+</html>
