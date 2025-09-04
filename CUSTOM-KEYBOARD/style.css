@@ -1,0 +1,7 @@
+.key {
+  user-select: none;
+  transition: transform 0.1s;
+}
+.key:active {
+  transform: scale(0.95);
+}
