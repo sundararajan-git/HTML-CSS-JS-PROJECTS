@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Expandable Sortable Table</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./script.js" defer></script>
+  </head>
+  <body class="bg-gray-100 p-6">
+    <div class="max-w-6xl mx-auto bg-white rounded-lg shadow overflow-hidden">
+      <table class="w-full table-auto text-left">
+        <thead class="bg-gray-200">
+          <tr>
+            <th class="px-4 py-2" onclick="sortTable(0)">Name ▲▼</th>
+            <th class="px-4 py-2" onclick="sortTable(1)">Age ▲▼</th>
+            <th class="px-4 py-2" onclick="sortTable(2)">Department ▲▼</th>
+            <th class="px-4 py-2">Details</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+          <tr class="border-b">
+            <td class="px-4 py-2">Alice</td>
+            <td class="px-4 py-2">25</td>
+            <td class="px-4 py-2">Marketing</td>
+            <td
+              class="px-4 py-2 text-blue-500 cursor-pointer"
+              onclick="toggleRow(this)"
+            >
+              View
+            </td>
+          </tr>
+          <tr class="expandable-content border-b bg-gray-50">
+            <td colspan="4" class="px-4 py-2">
+              Alice is a marketing specialist working on social media campaigns.
+            </td>
+          </tr>
+          <tr class="border-b">
+            <td class="px-4 py-2">Bob</td>
+            <td class="px-4 py-2">30</td>
+            <td class="px-4 py-2">Development</td>
+            <td
+              class="px-4 py-2 text-blue-500 cursor-pointer"
+              onclick="toggleRow(this)"
+            >
+              View
+            </td>
+          </tr>
+          <tr class="expandable-content border-b bg-gray-50">
+            <td colspan="4" class="px-4 py-2">
+              Bob is a frontend developer specializing in React and TailwindCSS.
+            </td>
+          </tr>
+          <tr class="border-b">
+            <td class="px-4 py-2">Charlie</td>
+            <td class="px-4 py-2">28</td>
+            <td class="px-4 py-2">Design</td>
+            <td
+              class="px-4 py-2 text-blue-500 cursor-pointer"
+              onclick="toggleRow(this)"
+            >
+              View
+            </td>
+          </tr>
+          <tr class="expandable-content border-b bg-gray-50">
+            <td colspan="4" class="px-4 py-2">
+              Charlie is a UI/UX designer working on web and mobile interfaces.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
