@@ -10,18 +10,18 @@ const chartHeight = canvas.height - 50;
 const barWidth = chartWidth / data.length - 20;
 const maxValue = Math.max(...data);
 
-// Draw bars
+//  bars
 data.forEach((value, index) => {
     const barHeight = (value / maxValue) * chartHeight;
     ctx.fillStyle = colors[index];
     ctx.fillRect(
         40 + index * (barWidth + 20),
-        canvas.height - barHeight - 30,
+        canvas.height - barHeight - 25,
         barWidth,
         barHeight
     );
 
-    // Draw label
+    // label
     ctx.fillStyle = "#000";
     ctx.textAlign = "center";
     ctx.fillText(
@@ -30,7 +30,7 @@ data.forEach((value, index) => {
         canvas.height - 10
     );
 
-    // Draw value
+    // value
     ctx.fillText(
         value,
         40 + index * (barWidth + 20) + barWidth / 2,
@@ -38,9 +38,9 @@ data.forEach((value, index) => {
     );
 });
 
-// Draw axes
+// axes
 ctx.beginPath();
-ctx.moveTo(30, 0);
-ctx.lineTo(30, canvas.height - 30);
-ctx.lineTo(canvas.width, canvas.height - 30);
+ctx.moveTo(10, 0);
+ctx.lineTo(10, canvas.height - 1);
+ctx.lineTo(canvas.width, canvas.height - 1);
 ctx.stroke();
