@@ -10,7 +10,7 @@ const diceFaces = [
     "\u2683",
     "\u2684",
     "\u2685",
-]; // Unicode dice faces
+];
 
 function rollDice() {
     const roll1 = Math.floor(Math.random() * 6);
@@ -20,9 +20,9 @@ function rollDice() {
     dice2.textContent = diceFaces[roll2];
 
     if (roll1 > roll2) {
-        result.textContent = "🎉 Player 1 wins!";
+        result.textContent = "🎉 You wins!";
     } else if (roll2 > roll1) {
-        result.textContent = "🎉 Player 2 wins!";
+        result.textContent = "🎉 Computer wins!";
     } else {
         result.textContent = "🤝 It's a tie!";
     }
