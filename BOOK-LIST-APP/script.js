@@ -15,11 +15,11 @@ function renderBooks() {
         const row = document.createElement('tr');
         row.className = 'border-b';
         row.innerHTML = `
-          <td class="border px-4 py-2">${book.title}</td>
-          <td class="border px-4 py-2">${book.author}</td>
-          <td class="border px-4 py-2 space-x-2">
-            <button class="px-2 py-1 bg-yellow-500 text-white rounded hover:bg-yellow-600" onclick="editBook(${index})">Edit</button>
-            <button class="px-2 py-1 bg-red-500 text-white rounded hover:bg-red-600" onclick="deleteBook(${index})">Delete</button>
+          <td class="border border-gray-300 px-4 py-2">${book.title}</td>
+          <td class="border border-gray-300 px-4 py-2">${book.author}</td>
+          <td class="border border-gray-300 px-4 py-2 space-x-2">
+            <button class="px-2 py-1 bg-green-600 text-white rounded hover:bg-green-700 cursor-pointer" onclick="editBook(${index})">Edit</button>
+            <button class="px-2 py-1 bg-red-600 text-white rounded hover:bg-red-700 cursor-pointer" onclick="deleteBook(${index})">Delete</button>
           </td>
         `;
         bookList.appendChild(row);
@@ -58,5 +58,4 @@ function editBook(index) {
 
 addBtn.addEventListener('click', addBook);
 
-// Initial render
 renderBooks();
