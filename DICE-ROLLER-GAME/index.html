@@ -4,34 +4,48 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
+    <style type="text/tailwindcss">
+      @theme {
+        --color-primary: #155dfc;
+      }
+    </style>
     <title>Dice Roller Game</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- tailwindcss cdn link -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="./script.js" defer></script>
   </head>
-  <body class="bg-gray-100 flex items-center justify-center h-screen">
-    <div class="bg-white p-8 rounded-lg shadow-lg text-center w-full max-w-sm">
-      <h1 class="text-2xl font-bold mb-4">🎲 Dice Roller</h1>
-
-      <div class="flex justify-center gap-4 mb-6">
-        <div
-          id="dice1"
-          class="w-20 h-20 flex items-center justify-center text-4xl bg-gray-200 rounded-lg shadow"
-        >
-          🎲
+  <body class="bg-gray-100 flex flex-col items-center justify-center h-screen">
+    <h1 class="text-2xl font-semibold mb-4 text-primary">Dice Roller</h1>
+    <div
+      class="bg-white p-8 py-12 rounded-lg shadow-lg text-center w-full max-w-sm"
+    >
+      <div class="flex justify-center items-center gap-4 mb-6">
+        <div class="flex flex-col gap-4">
+          <span>You</span>
+          <div
+            id="dice1"
+            class="w-20 h-20 flex items-center justify-center text-4xl bg-gray-200 rounded-lg shadow"
+          >
+            🎲
+          </div>
         </div>
-        <div
-          id="dice2"
-          class="w-20 h-20 flex items-center justify-center text-4xl bg-gray-200 rounded-lg shadow"
-        >
-          🎲
+        <span class="font-medium text-red-600 mt-8">VS</span>
+        <div class="flex flex-col gap-4">
+          <span>Computer</span>
+          <div
+            id="dice2"
+            class="w-20 h-20 flex items-center justify-center text-4xl bg-gray-200 rounded-lg shadow"
+          >
+            🎲
+          </div>
         </div>
       </div>
-
-      <div id="result" class="text-lg font-semibold mb-6">Roll the dice!</div>
+      <br />
+      <div id="result" class="text-lg font-medium mb-6">Roll the dice!</div>
 
       <button
         id="rollBtn"
-        class="px-6 py-2 bg-blue-500 text-white font-semibold rounded hover:bg-blue-600 transition"
+        class="px-6 py-2 bg-primary text-white font-semibold rounded-md hover:bg-blue-600 transition cursor-pointer outline-none"
       >
         Roll Dice
       </button>
