@@ -1,20 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Questrial&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --primary: #155dfc;
+}
+
+* {
+  font-family: "Questrial", sans-serif;
+}
+
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 20px;
   height: 100vh;
   margin: 0px;
-  font-family: "Poppins", sans-serif;
-  color: #333;
 }
 
 h3 {
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.7rem;
   margin-bottom: 20px;
   font-weight: 600;
   text-transform: uppercase;
-  color: blue;
+  color: var(--primary);
   margin-top: 200px;
 }
 
@@ -30,15 +39,12 @@ section div {
   padding: 20px 40px;
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2);
-  color: #222;
 }
 
 #hrs,
 #min,
 #sec {
-  color: #2e2e2e;
+  color: #000;
 }
 
 #peroid {
