@@ -9,9 +9,6 @@ const genCodes = () => {
     const randIndex = Math.floor(Math.random() * 16);
     hexCode += hexLetters[randIndex];
   }
-  if (hexCodes.length > 25) {
-    hexCodes.length = 0;
-  }
   hexCodes.push(hexCode);
 };
 
@@ -25,6 +22,7 @@ function codeCopy(e) {
 }
 
 const generateBtnHandler = () => {
+  hexCodes.length = 0
   for (let i = 0; i < 25; i++) {
     genCodes();
   }
