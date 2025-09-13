@@ -1,4 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Questrial&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --primary: #155dfc;
+}
 
 * {
   margin: 0;
@@ -7,27 +11,30 @@
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Questrial", sans-serif;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: linear-gradient(135deg, #4f46e5, #3b82f6);
-  color: #333;
+  background-color: whitesmoke;
 }
 
 .bmi-container {
-  background: rgba(255, 255, 255, 0.9);
-  padding: 30px 40px;
-  border-radius: 15px;
+  background: white;
+  padding: 40px 40px;
+  border-radius: 8px;
   text-align: center;
-  width: 300px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 h2 {
   margin-bottom: 20px;
-  color: #4f46e5;
+  color: var(--primary);
+  font-weight: 800;
 }
 
 .input-group {
@@ -37,8 +44,7 @@ h2 {
 
 .input-group label {
   display: block;
-  margin-bottom: 5px;
-  font-weight: 500;
+  margin-bottom: 10px;
 }
 
 .input-group input {
@@ -54,7 +60,7 @@ button {
   margin-top: 10px;
   border: none;
   border-radius: 8px;
-  background-color: #4f46e5;
+  background-color: var(--primary);
   color: #fff;
   cursor: pointer;
   font-weight: 500;
@@ -62,12 +68,9 @@ button {
 }
 
 button:hover {
-  background-color: #3730a3;
+  background-color: #105df0;
 }
 
 .result {
   margin-top: 20px;
-  font-size: 18px;
-  font-weight: 600;
-  color: #333;
 }
