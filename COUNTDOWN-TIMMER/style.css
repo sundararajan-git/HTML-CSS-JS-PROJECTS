@@ -1,23 +1,28 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Questrial&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --primary: #155dfc;
+}
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", cursive;
+  font-family: "Questrial", sans-serif;
 }
 body {
   height: 100vh;
   width: 100vw;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: whitesmoke;
 }
 .box {
-  background-color: black;
-  height: 200px;
-  width: 400px;
-  border-radius: 5px;
+  background-color: white;
+  padding: 2.5em;
+  border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,8 +39,9 @@ body {
 }
 
 h3 {
-  font-weight: 500;
-  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--primary);
   text-transform: uppercase;
   margin-bottom: 25px;
 }
@@ -49,7 +55,6 @@ h3 {
   font-size: 50px;
   text-align: center;
   line-height: 50px;
-  color: white;
 }
 .colon {
   width: 10px;
@@ -57,14 +62,16 @@ h3 {
 }
 .buttons {
   margin-top: 25px;
+  display: flex;
+  gap: 20px;
 }
 .buttons button {
   border: none;
-  padding: 5px 20px;
+  padding: 10px 20px;
   color: black;
-  border-radius: 3px;
-  text-transform: uppercase;
+  border-radius: 5px;
   cursor: pointer;
+  background: whitesmoke;
 }
 
 .start,
@@ -75,7 +82,8 @@ h3 {
 .start:hover,
 .stop:hover,
 .reset:hover {
-  background-color: aqua;
+  background-color: var(--primary);
+  color: white;
 }
 
 .start-active,
