@@ -1,8 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Questrial&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --primary: #155dfc;
+}
 
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: "Questrial", sans-serif;
 }
 
 body {
@@ -11,15 +17,16 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  background: whitesmoke;
 }
 
 .container {
-  background: rgba(255, 255, 255, 0.1);
+  background: white;
   backdrop-filter: blur(10px);
   padding: 30px 40px;
   border-radius: 15px;
   text-align: center;
-  width: 300px;
+  width: 350px;
 }
 
 h2 {
@@ -51,7 +58,8 @@ h2 {
   border-radius: 8px;
   margin-bottom: 15px;
   text-align: center;
-  font-weight: bold;
+  font-size: 15px;
+  outline: none;
 }
 
 button {
@@ -65,18 +73,17 @@ button {
 }
 
 #copyBtn {
-  background-color: #4f46e5;
+  background-color: var(--primary);
   color: #fff;
 }
 
 #copyBtn:hover {
-  background-color: #3730a3;
   transform: translateY(-2px);
 }
 
 #randomBtn {
   background-color: #fff;
-  color: #4f46e5;
+  color: var(--primary);
 }
 
 #randomBtn:hover {
