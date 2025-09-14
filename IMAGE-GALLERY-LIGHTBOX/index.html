@@ -3,57 +3,65 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.js" />
+    <link rel="stylesheet" href="./style.css" />
+    <style type="text/tailwindcss">
+      /* custom css */
+      @theme {
+        --color-primary: #155dfc;
+      }
+    </style>
     <title>Image Gallery with Lightbox</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./script.js" defer></script>
   </head>
   <body class="bg-gray-100 flex flex-col items-center p-6">
-    <h1 class="text-3xl font-bold mb-6">🖼️ Image Gallery</h1>
+    <h1 class="text-3xl font-bold mb-6">Image Gallery</h1>
 
-    <!-- Gallery Grid -->
     <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 max-w-4xl">
       <img
-        src="https://via.placeholder.com/300x200?text=1"
+        src="https://images.unsplash.com/photo-1501785888041-af3ef285b470"
         alt="Image 1"
         class="cursor-pointer rounded shadow hover:scale-105 transition"
         onclick="openLightbox(this)"
       />
       <img
-        src="https://via.placeholder.com/300x200?text=2"
+        src="https://images.unsplash.com/photo-1503376780353-7e6692767b70"
         alt="Image 2"
         class="cursor-pointer rounded shadow hover:scale-105 transition"
         onclick="openLightbox(this)"
       />
       <img
-        src="https://via.placeholder.com/300x200?text=3"
+        src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
         alt="Image 3"
         class="cursor-pointer rounded shadow hover:scale-105 transition"
         onclick="openLightbox(this)"
       />
       <img
-        src="https://via.placeholder.com/300x200?text=4"
+        src="https://images.unsplash.com/photo-1501785888041-af3ef285b470"
         alt="Image 4"
         class="cursor-pointer rounded shadow hover:scale-105 transition"
         onclick="openLightbox(this)"
       />
       <img
-        src="https://via.placeholder.com/300x200?text=5"
+        src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d"
         alt="Image 5"
         class="cursor-pointer rounded shadow hover:scale-105 transition"
         onclick="openLightbox(this)"
       />
       <img
-        src="https://via.placeholder.com/300x200?text=6"
+        src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131"
         alt="Image 6"
         class="cursor-pointer rounded shadow hover:scale-105 transition"
         onclick="openLightbox(this)"
       />
     </div>
 
-    <!-- Lightbox -->
-    <div id="lightbox" class="flex" onclick="closeLightbox()">
-      <img id="lightboxImg" src="" alt="Lightbox Image" />
+    <div id="lightbox" class="flex1" onclick="closeLightbox()">
+      <img
+        id="lightboxImg"
+        src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131"
+        alt="Lightbox Image"
+      />
     </div>
   </body>
 </html>
