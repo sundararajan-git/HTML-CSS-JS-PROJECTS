@@ -26,3 +26,7 @@ document.getElementById("wizardForm").addEventListener("submit", (e) => {
     e.preventDefault();
     alert("Form submitted! (UI only)");
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    showStep(currentStep)
+})
