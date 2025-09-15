@@ -1,8 +1,6 @@
 const symbols = ["🍎", "🍌", "🍇", "🍓", "🍒", "🥝", "🍍", "🍑"];
-let cards = [...symbols, ...symbols]; // duplicate for pairs
-let firstCard = null,
-    secondCard = null;
-let lockBoard = false;
+let cards = [...symbols, ...symbols];
+let firstCard = null, secondCard = null, lockBoard = false;
 
 function shuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
