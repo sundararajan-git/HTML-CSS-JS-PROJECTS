@@ -1,8 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Questrial&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --primary: #155dfc;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Questrial", sans-serif !important;
 }
 
 body {
@@ -23,7 +29,7 @@ body {
 .shape1 {
   width: 150px;
   height: 150px;
-  background: #4a90e2;
+  background: var(--primary);
   top: 50px;
   left: -50px;
 }
@@ -31,7 +37,7 @@ body {
 .shape2 {
   width: 200px;
   height: 200px;
-  background: #357abd;
+  background: var(--primary);
   bottom: 100px;
   right: -100px;
 }
@@ -39,7 +45,7 @@ body {
 .shape3 {
   width: 100px;
   height: 100px;
-  background: #a0c4ff;
+  background: var(--primary);
   top: 200px;
   right: -50px;
 }
@@ -68,7 +74,7 @@ body {
 .navbar .logo {
   font-size: 26px;
   font-weight: bold;
-  color: #4a90e2;
+  color: var(--primary);
 }
 
 .nav-links {
@@ -85,13 +91,13 @@ body {
 }
 
 .nav-links li a:hover {
-  color: #4a90e2;
+  color: var(--primary);
   transform: scale(1.1);
 }
 
 .cta-btn {
   padding: 10px 22px;
-  background: linear-gradient(90deg, #4a90e2, #357abd);
+  background: var(--primary);
   color: #fff;
   border: none;
   border-radius: 10px;
@@ -101,7 +107,6 @@ body {
 }
 
 .cta-btn:hover {
-  background: linear-gradient(90deg, #357abd, #4a90e2);
   transform: scale(1.05);
 }
 
@@ -122,7 +127,7 @@ body {
 
 .hero-content h1 {
   font-size: 42px;
-  color: #4a90e2;
+  color: var(--primary);
   margin-bottom: 20px;
 }
 
@@ -156,7 +161,7 @@ body {
 
 .features h2 {
   font-size: 34px;
-  color: #4a90e2;
+  color: var(--primary);
   margin-bottom: 40px;
 }
 
@@ -191,7 +196,7 @@ body {
 
 .testimonials h2 {
   font-size: 34px;
-  color: #4a90e2;
+  color: var(--primary);
   margin-bottom: 40px;
 }
 
@@ -225,7 +230,7 @@ body {
 
 .contact h2 {
   font-size: 34px;
-  color: #4a90e2;
+  color: var(--primary);
   margin-bottom: 30px;
 }
 
@@ -249,13 +254,13 @@ body {
 
 .contact input:focus,
 .contact textarea:focus {
-  border-color: #4a90e2;
+  border-color: var(--primary);
   box-shadow: 0 0 12px rgba(74, 144, 226, 0.3);
 }
 
 .contact button {
   padding: 12px 20px;
-  background: linear-gradient(90deg, #4a90e2, #357abd);
+  background: var(--primary);
   color: #fff;
   font-weight: 600;
   border: none;
@@ -265,7 +270,6 @@ body {
 }
 
 .contact button:hover {
-  background: linear-gradient(90deg, #357abd, #4a90e2);
   transform: scale(1.05);
 }
 
