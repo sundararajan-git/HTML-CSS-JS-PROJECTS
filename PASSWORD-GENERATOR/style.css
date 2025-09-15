@@ -1,14 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Questrial&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --primary: #155dfc;
+}
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Poppins, Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Questrial", sans-serif !important;
 }
 
 body {
-  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  background: whitesmoke;
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -48,7 +52,7 @@ form p {
   font-weight: 500;
   letter-spacing: 1.5px;
   font-size: 0.8rem;
-  border: 2px dashed #6a11cb;
+  border: 2px dashed var(--primary);
   color: #222;
   word-wrap: break-word;
 }
@@ -75,7 +79,7 @@ form p {
 }
 
 button[type="submit"] {
-  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  background: var(--primary);
   color: #fff;
   padding: 12px;
   font-size: 1rem;
