@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
     <title>Kanban Board</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- tailwindcss cdn link -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="./script.js" defer></script>
   </head>
   <body class="bg-gray-100 min-h-screen p-6">
-    <h1 class="text-3xl font-bold text-center mb-6">📋 Kanban Board</h1>
+    <h1 class="text-3xl font-bold text-center mb-6">Kanban Board</h1>
 
     <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-6xl mx-auto">
-      <!-- Columns -->
       <div class="bg-gray-200 p-4 rounded-lg">
         <h2 class="font-bold mb-2">To Do</h2>
         <div id="todo" class="space-y-2 min-h-[200px]">
