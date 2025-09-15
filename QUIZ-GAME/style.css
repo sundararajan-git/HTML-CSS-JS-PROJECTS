@@ -1,14 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Questrial&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --primary: #155dfc;
+}
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Poppins, Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Questrial", sans-serif !important;
 }
 
 body {
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  background: whitesmoke;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -43,7 +47,7 @@ body {
 }
 
 button {
-  background: #667eea;
+  background: var(--primary);
   color: white;
   border: none;
   padding: 12px 24px;
@@ -51,10 +55,6 @@ button {
   border-radius: 8px;
   cursor: pointer;
   transition: background 0.3s ease-in-out;
-}
-
-button:hover {
-  background: #5a67d8;
 }
 
 #quizTemplate h4 {
@@ -92,9 +92,9 @@ button:hover {
 }
 
 #radioContainer input[type="radio"]:checked + label {
-  background: #667eea;
+  background: var(--primary);
   color: white;
-  border-color: #5a67d8;
+  border-color: var(--primary);
 }
 
 #progressContainer {
@@ -115,12 +115,12 @@ progress::-webkit-progress-bar {
 }
 
 progress::-webkit-progress-value {
-  background: #667eea;
+  background: var(--primary);
   border-radius: 6px;
 }
 
 progress::-moz-progress-bar {
-  background: #667eea;
+  background: var(--primary);
   border-radius: 6px;
 }
 
