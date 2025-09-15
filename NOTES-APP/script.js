@@ -40,10 +40,8 @@ function deleteNote(index) {
 
 addBtn.addEventListener('click', addNote);
 
-// Enter key adds note
 noteInput.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') addNote();
 });
 
-// Initial render
 renderNotes();
