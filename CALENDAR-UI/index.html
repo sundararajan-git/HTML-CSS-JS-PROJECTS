@@ -3,9 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style type="text/tailwindcss">
+      /* custom css */
+      @theme {
+        --color-primary: #155dfc;
+      }
+    </style>
+
     <link rel="stylesheet" href="./style.css" />
+    <!-- tailwindcss cdn link -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Calendar UI</title>
-    <script src="https://cdn.tailwindcss.com"></script>
     <script src="./script.js" defer></script>
   </head>
   <body class="bg-gray-100 flex items-center justify-center h-screen">
@@ -13,16 +21,16 @@
       <div class="flex justify-between items-center mb-4">
         <button
           id="prevMonth"
-          class="px-2 py-1 bg-gray-200 rounded hover:bg-gray-300"
+          class="px-2 py-1 bg-gray-200 rounded hover:bg-gray-300 cursor-pointer"
         >
-          &lt;
+          Next
         </button>
         <h2 id="monthYear" class="text-lg font-semibold"></h2>
         <button
           id="nextMonth"
-          class="px-2 py-1 bg-gray-200 rounded hover:bg-gray-300"
+          class="px-2 py-1 bg-gray-200 rounded hover:bg-gray-300 cursor-pointer"
         >
-          &gt;
+          Prev
         </button>
       </div>
 
