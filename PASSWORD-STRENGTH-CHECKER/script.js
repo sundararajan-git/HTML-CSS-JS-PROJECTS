@@ -17,10 +17,8 @@ password.addEventListener('input', () => {
     const pwd = password.value;
     const strength = checkStrength(pwd);
 
-    // Update bar
     strengthBar.style.width = `${(strength / 5) * 100}%`;
 
-    // Update color and text
     switch (strength) {
         case 0:
         case 1:
