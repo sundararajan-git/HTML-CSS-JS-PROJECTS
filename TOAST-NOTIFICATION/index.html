@@ -4,20 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <style type="text/tailwindcss">
+      /* custom css */
+      @theme {
+        --color-primary: #155dfc;
+      }
+    </style>
     <title>Toast Notification</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- tailwindcss cdn link -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="./script.js" defer></script>
   </head>
   <body class="bg-gray-100 flex items-center justify-center min-h-screen">
     <div class="space-x-2">
       <button
-        class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition"
+        class="px-4 py-2 bg-primary text-white rounded cursor-pointer transition"
         onclick="showToast('Info: This is a toast!')"
       >
         Show Toast
       </button>
       <button
-        class="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 transition"
+        class="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 cursor-pointer transition"
         onclick="showToast('Success: Action completed!')"
       >
         Success Toast
