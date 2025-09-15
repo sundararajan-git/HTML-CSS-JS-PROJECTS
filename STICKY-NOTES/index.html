@@ -4,31 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
+    <style type="text/tailwindcss">
+      /* custom css */
+      @theme {
+        --color-primary: #155dfc;
+      }
+    </style>
     <title>Sticky Notes Board</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- tailwindcss cdn link -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="./script.js" defer></script>
   </head>
   <body class="bg-gray-100 p-6">
     <div class="max-w-6xl mx-auto">
       <h1 class="text-2xl font-bold mb-4 text-center">📝 Sticky Notes Board</h1>
 
-      <!-- Add Note -->
       <div class="flex mb-4 gap-2">
         <input
           type="text"
           id="noteInput"
           placeholder="Write a note..."
-          class="flex-1 px-3 py-2 border rounded shadow focus:outline-none focus:ring-2 focus:ring-blue-400"
+          class="flex-1 px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-transparent focus:ring-2 focus:ring-primary"
         />
         <button
           id="addBtn"
-          class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition"
+          class="px-4 py-2 bg-primary text-white rounded cursor-pointer transition"
         >
           Add Note
         </button>
       </div>
 
-      <!-- Notes Board -->
       <div id="notesBoard" class="flex flex-wrap gap-4"></div>
     </div>
   </body>

@@ -14,7 +14,7 @@ function renderNotes() {
         const noteDiv = document.createElement('div');
         noteDiv.className = 'note';
         noteDiv.innerHTML = `
-          <span class="delete-btn text-red-500" onclick="deleteNote(${index})">&times;</span>
+          <span class="delete-btn text-red-500 p-2" onclick="deleteNote(${index})">&times;</span>
           <p>${note}</p>
         `;
         notesBoard.appendChild(noteDiv);
