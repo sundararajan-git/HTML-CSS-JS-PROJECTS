@@ -8,7 +8,6 @@ playBtn.addEventListener('click', () => {
     playBtn.textContent = isPlaying ? "⏸️" : "▶️";
 });
 
-// Simulate progress bar
 let progress = 0;
 setInterval(() => {
     if (isPlaying) {
