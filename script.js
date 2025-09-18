@@ -61,6 +61,7 @@ const list = document.getElementById("project-list");
 projects.forEach(proj => {
     const li = document.createElement("li");
     const link = document.createElement("a");
+    li.className = "text-red-600 bg-gray-100 w-full p-4 rounded-lg font-medium cursor-pointer"
     link.href = proj.path;
     link.textContent = proj.name;
     li.appendChild(link);
