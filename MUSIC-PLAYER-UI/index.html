@@ -13,6 +13,8 @@
     <title>Music Player</title>
     <!-- tailwindcss cdn link -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- feather icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
     <script src="./script.js" defer></script>
   </head>
   <body class="bg-gray-100 flex items-center justify-center min-h-screen">
@@ -43,16 +45,29 @@
       </div>
 
       <div class="flex justify-center items-center gap-6">
-        <button id="prevBtn" class="text-gray-600 hover:text-gray-800 text-2xl">
-          ⏮️
+        <button
+          id="prevBtn"
+          class="text-gray-600 hover:text-gray-800 text-2xl cursor-pointer"
+        >
+          <i data-feather="skip-back"></i>
         </button>
-        <button id="playBtn" class="text-gray-600 hover:text-gray-800 text-3xl">
-          ▶️
+        <button
+          id="playBtn"
+          class="text-gray-600 hover:text-gray-800 text-3xl cursor-pointer"
+        >
+          <i data-feather="play"></i>
+          <i data-feather="pause" class="hidden"></i>
         </button>
-        <button id="nextBtn" class="text-gray-600 hover:text-gray-800 text-2xl">
-          ⏭️
+        <button
+          id="nextBtn"
+          class="text-gray-600 hover:text-gray-800 text-2xl cursor-pointer"
+        >
+          <i data-feather="skip-forward"></i>
         </button>
       </div>
     </div>
+    <script>
+      feather.replace();
+    </script>
   </body>
 </html>

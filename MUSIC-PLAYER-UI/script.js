@@ -5,7 +5,14 @@ let isPlaying = false;
 
 playBtn.addEventListener('click', () => {
     isPlaying = !isPlaying;
-    playBtn.textContent = isPlaying ? "⏸️" : "▶️";
+
+    if (isPlaying) {
+        document.querySelector('.feather-pause').classList.remove("hidden")
+        document.querySelector('.feather-play').classList.add("hidden")
+    } else {
+        document.querySelector('.feather-pause').classList.add("hidden")
+        document.querySelector('.feather-play').classList.remove("hidden")
+    }
 });
 
 let progress = 0;
