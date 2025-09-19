@@ -7,6 +7,8 @@
     <title>Mobile App Mock UI</title>
     <!-- tailwindcss cdn link -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- feather icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
     <script src="./script.js" defer></script>
   </head>
   <body class="bg-gray-200 flex items-center justify-center min-h-screen">
@@ -15,7 +17,9 @@
     >
       <div class="bg-blue-500 text-white p-4 flex justify-between items-center">
         <h1 class="text-lg font-bold">My App</h1>
-        <button class="text-white text-xl">⚙️</button>
+        <button class="text-white text-xl">
+          <i data-feather="settings"></i>
+        </button>
       </div>
 
       <div class="flex-1 overflow-y-auto p-4 space-y-4">
@@ -51,30 +55,33 @@
 
       <div class="bg-white p-2 flex justify-around">
         <button
-          class="flex flex-col items-center text-gray-500 hover:text-blue-500"
+          class="flex flex-col items-center text-gray-500 hover:text-blue-500 cursor-pointer"
         >
-          <span class="text-xl">🏠</span>
+          <span class="text-xl"><i data-feather="home"></i></span>
           <span class="text-xs">Home</span>
         </button>
         <button
-          class="flex flex-col items-center text-gray-500 hover:text-blue-500"
+          class="flex flex-col items-center text-gray-500 hover:text-blue-500 cursor-pointer"
         >
-          <span class="text-xl">🔍</span>
+          <span class="text-xl"><i data-feather="search"></i></span>
           <span class="text-xs">Search</span>
         </button>
         <button
-          class="flex flex-col items-center text-gray-500 hover:text-blue-500"
+          class="flex flex-col items-center text-gray-500 hover:text-blue-500 cursor-pointer"
         >
-          <span class="text-xl">❤️</span>
+          <span class="text-xl"><i data-feather="heart"></i></span>
           <span class="text-xs">Favorites</span>
         </button>
         <button
-          class="flex flex-col items-center text-gray-500 hover:text-blue-500"
+          class="flex flex-col items-center text-gray-500 hover:text-blue-500 cursor-pointer"
         >
-          <span class="text-xl">👤</span>
+          <span class="text-xl"><i data-feather="user"></i></span>
           <span class="text-xs">Profile</span>
         </button>
       </div>
     </div>
+    <script>
+      feather.replace();
+    </script>
   </body>
 </html>

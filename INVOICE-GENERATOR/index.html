@@ -14,12 +14,17 @@
     <title>Invoice Generator UI</title>
     <!-- tailwindcss cdn link -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- feather icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
     <script src="./script.js" defer></script>
   </head>
   <body class="bg-gray-100 p-6">
     <div class="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-lg">
       <div class="flex justify-between items-center mb-6">
-        <h1 class="text-2xl font-bold">Invoice</h1>
+        <div class="flex items-center gap-2">
+          <i data-feather="file-text"></i>
+          <h1 class="text-2xl font-bold text-primary">Invoice</h1>
+        </div>
         <button
           id="exportBtn"
           class="px-4 py-2 bg-primary text-white rounded cursor-pointer transition"
@@ -93,5 +98,8 @@
         <p>Thank you for your business!</p>
       </div>
     </div>
+    <script>
+      feather.replace();
+    </script>
   </body>
 </html>
