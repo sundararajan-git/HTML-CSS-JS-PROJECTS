@@ -5,9 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
     <title>Document</title>
+    <!-- feather icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="./script.js" defer></script>
   </head>
   <body>
-    <h3>Calculator</h3>
+    <div class="header">
+      <i data-feather="hash"></i>
+      <h3>Calculator</h3>
+    </div>
     <section>
       <div class="display">
         <span class="expersion" id="expersion"></span>
@@ -36,6 +42,8 @@
         <button type="btn" data-value="=">=</button>
       </div>
     </section>
-    <script src="./script.js" defer></script>
+    <script>
+      feather.replace();
+    </script>
   </body>
 </html>

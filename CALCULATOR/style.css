@@ -18,7 +18,6 @@ body {
 }
 
 h3 {
-  margin-bottom: 20px;
   font-size: 28px;
   letter-spacing: 1px;
   color: var(--primary);
@@ -105,4 +104,11 @@ button:nth-child(17) {
     font-size: 18px;
     padding: 15px;
   }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
