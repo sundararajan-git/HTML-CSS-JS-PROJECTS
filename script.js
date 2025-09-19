@@ -11,7 +11,6 @@ const projects = [
     { name: "Custom Keyboard", path: "CUSTOM-KEYBOARD/index.html" },
     { name: "Dice Roller Game", path: "DICE-ROLLER-GAME/index.html" },
     { name: "Digital Clock", path: "DIGITAL-CLOCK/index.html" },
-    { name: "Drag Drop", path: "DRAG-AND-DROP/index.html" },
     { name: "Event CountDown", path: "EVENT-COUNTDOWN-APP/index.html" },
     { name: "Expense Tracker", path: "EXPENSE-TRACKER/index.html" },
     { name: "FAQ Accordion", path: "FAQ-ACCORDION/index.html" },
