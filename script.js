@@ -39,6 +39,7 @@ const projects = [
     { name: "Personal Portfolio", path: "PERSONAL-PORTFOLIO-WEBSITE/index.html" },
     { name: "Pie Chart", path: "PIE-CHART/index.html" },
     { name: "Pomodoro Timer", path: "POMODORO-TIMER-APP/index.html" },
+    { name: "Product Card", path: "PRODUCT-CARD/index.html" },
     { name: "Quiz Game", path: "QUIZ-GAME/index.html" },
     { name: "Resume Builder UI", path: "RESUME-BUILDER-UI/index.html" },
     { name: "Rock Paper Scissor Game", path: "ROCK-PAPER-SCISSORS-GAME/index.html" },
