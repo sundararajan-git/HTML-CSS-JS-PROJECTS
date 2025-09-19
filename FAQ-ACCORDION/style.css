@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Questrial&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
+:root {
+  --primary: #155dfc;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -23,9 +27,16 @@ body {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 35px;
+}
+
 h2 {
-  text-align: center;
-  margin-bottom: 25px;
+  color: var(--primary);
 }
 
 .faq-item {
