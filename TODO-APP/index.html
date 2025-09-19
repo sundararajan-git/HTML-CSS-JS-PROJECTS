@@ -5,16 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
     <title>Todo App</title>
+    <!-- feather icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
     <script src="./script.js" defer></script>
   </head>
   <body>
     <div class="container">
-      <h3>Todo App</h3>
+      <div class="header">
+        <i data-feather="list"></i>
+        <h3>Todo App</h3>
+      </div>
       <form id="todoForm">
         <input type="text" name="name" placeholder="list.." />
         <button type="submit">Submit</button>
       </form>
       <div id="todoList"></div>
     </div>
+    <script>
+      feather.replace();
+    </script>
   </body>
 </html>
