@@ -4,17 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
+    <style type="text/tailwindcss">
+      @theme {
+        --color-primary: #155dfc;
+      }
+    </style>
     <title>Kanban Board</title>
     <!-- tailwindcss cdn link -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- feather icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
     <script src="./script.js" defer></script>
   </head>
   <body class="bg-gray-100 min-h-screen p-6">
-    <h1 class="text-3xl font-bold text-center mb-6">Kanban Board</h1>
+    <div class="flex items-center justify-center gap-3 mb-8">
+      <i data-feather="command"></i>
+      <h1 class="text-3xl font-bold text-center text-primary">Kanban Board</h1>
+    </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-6xl mx-auto">
       <div class="bg-gray-200 p-4 rounded-lg">
-        <h2 class="font-bold mb-2">To Do</h2>
+        <h2 class="font-bold mb-2 text-red-600">To Do</h2>
         <div id="todo" class="space-y-2 min-h-[200px]">
           <div class="task bg-white p-2 rounded shadow" draggable="true">
             Task 1
@@ -26,7 +36,7 @@
       </div>
 
       <div class="bg-gray-200 p-4 rounded-lg">
-        <h2 class="font-bold mb-2">In Progress</h2>
+        <h2 class="font-bold mb-2 text-primary">In Progress</h2>
         <div id="inprogress" class="space-y-2 min-h-[200px]">
           <div class="task bg-white p-2 rounded shadow" draggable="true">
             Task 3
@@ -35,7 +45,7 @@
       </div>
 
       <div class="bg-gray-200 p-4 rounded-lg">
-        <h2 class="font-bold mb-2">Done</h2>
+        <h2 class="font-bold mb-2 text-green-600">Done</h2>
         <div id="done" class="space-y-2 min-h-[200px]">
           <div class="task bg-white p-2 rounded shadow" draggable="true">
             Task 4
@@ -43,5 +53,8 @@
         </div>
       </div>
     </div>
+    <script>
+      feather.replace();
+    </script>
   </body>
 </html>
