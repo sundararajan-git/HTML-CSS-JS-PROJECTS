@@ -5,11 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
     <title>Color Palette Generator</title>
+    <!-- feather icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="./script.js" defer></script>
   </head>
   <body>
-    <h3>Color Palette Generator</h3>
+    <div class="header">
+      <i data-feather="droplet"></i>
+      <h3>Color Palette Generator</h3>
+    </div>
     <button type="button" id="generate">Generate</button>
     <div id="colorContainer"></div>
-    <script src="./script.js"></script>
+    <script>
+      feather.replace();
+    </script>
   </body>
 </html>
