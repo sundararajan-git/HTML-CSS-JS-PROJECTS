@@ -1,4 +1,3 @@
-// Just update this array when you add new projects (folder names)
 const projects = [
     { name: "Bar Chart", path: "BAR-CHART/index.html" },
     { name: "BMI Calculator", path: "BMI-CALCULATOR/index.html" },
