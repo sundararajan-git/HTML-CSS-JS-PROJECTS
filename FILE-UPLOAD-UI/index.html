@@ -13,11 +13,16 @@
     <title>File Upload UI</title>
     <!-- tailwindcss cdn link -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- feather icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
     <script src="./script.js" defer></script>
   </head>
   <body class="bg-gray-100 flex items-center justify-center min-h-screen">
     <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md text-center">
-      <h1 class="text-2xl font-bold mb-4">📁 Upload Your Files</h1>
+      <div class="flex items-center justify-center gap-3 mb-8">
+        <i data-feather="folder"></i>
+        <h1 class="text-2xl font-bold">Upload Your Files</h1>
+      </div>
 
       <div
         class="border-2 border-dashed border-gray-300 rounded-lg p-10 mb-4 hover:border-primary transition cursor-pointer"
@@ -46,5 +51,8 @@
         Supported formats: JPG, PNG, PDF. Max size: 10MB
       </p>
     </div>
+    <script>
+      feather.replace();
+    </script>
   </body>
 </html>

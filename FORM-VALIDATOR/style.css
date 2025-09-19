@@ -20,9 +20,16 @@ body {
   padding: 30px;
 }
 
+.header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
 h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: var(--primary);
   text-transform: uppercase;
 }
 
