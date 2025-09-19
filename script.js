@@ -20,7 +20,7 @@ const projects = [
     { name: "Form Wizard", path: "FORM-WIZARD/index.html" },
     { name: "Gifit Suggestion App", path: "GIFIT-SUGGESTION-APP/index.html" },
     { name: "Gradient Generator", path: "GRADIENT-GENERATOR/index.html" },
-    { name: "Image Galler", path: "IMAGE-GALLERY-LIGHTBOX/index.html" },
+    { name: "Image Gallery", path: "IMAGE-GALLERY-LIGHTBOX/index.html" },
     { name: "Image Slider", path: "IMAGE-SLIDER/index.html" },
     { name: "Invoice Generator", path: "INVOICE-GENERATOR/index.html" },
     { name: "Kanban Board", path: "KANBAN-BOARD/index.html" },
