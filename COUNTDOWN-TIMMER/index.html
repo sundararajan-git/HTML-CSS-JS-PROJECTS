@@ -5,10 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
     <title>Timer</title>
+    <!-- feather icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
     <script src="./script.js" defer></script>
   </head>
   <body>
-    <h3>Timmer</h3>
+    <div class="header">
+      <i data-feather="clock"></i>
+      <h3>Timmer</h3>
+    </div>
     <div class="box">
       <div class="frame">
         <div class="hrs">00</div>
@@ -25,5 +30,8 @@
         <button class="reset">Reset</button>
       </div>
     </div>
+    <script>
+      feather.replace();
+    </script>
   </body>
 </html>
