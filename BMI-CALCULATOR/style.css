@@ -74,3 +74,9 @@ button:hover {
 .result {
   margin-top: 20px;
 }
+
+.header {
+  display: flex;
+  alignt-items: center;
+  gap: 15px;
+}

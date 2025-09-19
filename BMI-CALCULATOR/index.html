@@ -5,10 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>BMI Calculator</title>
+    <!-- feather icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
     <script src="script.js" defer></script>
   </head>
   <body>
-    <h2>BMI Calculator</h2>
+    <div class="header">
+      <i data-feather="activity"></i>
+      <h2>BMI Calculator</h2>
+    </div>
     <div class="bmi-container">
       <div class="input-group">
         <label for="weight">Weight (kg)</label>
@@ -24,5 +29,8 @@
 
       <div class="result" id="result"></div>
     </div>
+    <script>
+      feather.replace();
+    </script>
   </body>
 </html>
