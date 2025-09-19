@@ -6,15 +6,23 @@
     <title>Color Picker</title>
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
+    <!-- feather icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
   </head>
   <body>
-    <div class="container">
+    <div class="header">
+      <i data-feather="pen-tool"></i>
       <h2>Color Picker</h2>
+    </div>
+    <div class="container">
       <input type="color" id="colorInput" />
       <div class="preview" id="previewBox"></div>
       <input type="text" id="colorCode" readonly value="#000000" />
       <button id="copyBtn">Copy Color</button>
       <button id="randomBtn">Random Color</button>
     </div>
+    <script>
+      feather.replace();
+    </script>
   </body>
 </html>
