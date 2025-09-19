@@ -58,12 +58,10 @@ const projects = [
 ];
 
 const list = document.getElementById("project-list");
-projects.forEach(proj => {
-    const li = document.createElement("li");
+projects.forEach((proj, index) => {
     const link = document.createElement("a");
-    li.className = "text-red-600 bg-gray-100 w-full p-4 rounded-lg font-medium cursor-pointer"
+    link.className = "w-full bg-gray-100 px-4 py-5 h-full text-gray-600 w-full rounded-lg cursor-pointer hover:bg-primary hover:text-white hover:scale-[1.04] transition-all"
     link.href = proj.path;
-    link.textContent = proj.name;
-    li.appendChild(link);
-    list.appendChild(li);
+    link.textContent = (index + 1) + ".  " + proj.name;
+    list.appendChild(link);
 });
