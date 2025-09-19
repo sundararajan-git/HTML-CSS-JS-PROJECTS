@@ -13,11 +13,18 @@
     <title>Book List App</title>
     <!-- tailwindcss cdn link -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- feather icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
     <script src="./script.js" defer></script>
   </head>
   <body class="bg-gray-100 p-6">
     <div class="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-lg">
-      <h1 class="text-2xl font-bold mb-6 text-center">Book List App</h1>
+      <div class="flex gap-2 items-center justify-center mb-6">
+        <i data-feather="book"></i>
+        <h1 class="text-2xl font-bold text-center text-primary">
+          Book List App
+        </h1>
+      </div>
 
       <div class="flex flex-col md:flex-row gap-4 mb-4">
         <input
@@ -34,7 +41,7 @@
         />
         <button
           id="addBtn"
-          class="px-4 py-2 bg-primary text-white rounded-md hover:bg-blue-600 transition"
+          class="px-4 py-2 bg-primary text-white rounded-md hover:bg-blue-600 transition cursor-pointer"
         >
           Add Book
         </button>
@@ -51,5 +58,8 @@
         <tbody id="bookList"></tbody>
       </table>
     </div>
+    <script>
+      feather.replace();
+    </script>
   </body>
 </html>
