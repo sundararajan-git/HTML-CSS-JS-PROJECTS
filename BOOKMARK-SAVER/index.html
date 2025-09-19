@@ -5,10 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
     <title>Bookmark Saver</title>
+    <!-- feather icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
     <script src="./script.js" defer></script>
   </head>
   <body>
-    <h3>Bookmark Saver</h3>
+    <div class="header">
+      <i data-feather="bookmark"></i>
+      <h3>Bookmark Saver</h3>
+    </div>
     <form name="bookmarkForm" id="bookmarkForm">
       <div class="field">
         <label for="bookmarkName">Bookmark Name</label>
@@ -34,5 +39,8 @@
     </form>
     <br />
     <div id="bookmarkContainerLists"></div>
+    <script>
+      feather.replace();
+    </script>
   </body>
 </html>
