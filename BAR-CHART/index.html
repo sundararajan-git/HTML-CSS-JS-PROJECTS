@@ -18,13 +18,15 @@
     <script src="./script.js" defer></script>
   </head>
   <body
-    class="bg-gray-100 flex flex-col gap-8 items-center justify-center min-h-screen"
+    class="bg-gray-100 flex flex-col gap-8 items-center justify-center min-h-screen p-2 sm:p-0"
   >
     <div class="flex items-center justifiy-center gap-4">
       <i data-feather="bar-chart-2"></i>
       <h1 class="text-2xl font-bold text-center text-primary">Bar Chart</h1>
     </div>
-    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-lg">
+    <div
+      class="bg-white p-8 rounded-lg shadow-lg w-full max-w-lg overflow-auto"
+    >
       <canvas id="barChart" width="400" height="300" class="mx-auto"></canvas>
     </div>
     <script>
