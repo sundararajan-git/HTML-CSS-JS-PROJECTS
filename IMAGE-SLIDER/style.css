@@ -73,6 +73,11 @@ body {
 
 @media (max-width: 480px) {
   #container img {
-    width: 250px;
+    width: 300px;
+  }
+  #rightBtn,
+  #leftBtn {
+    width: 30px !important;
+    color: gray;
   }
 }
