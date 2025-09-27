@@ -1,5 +1,6 @@
 const projects = [
     { name: "Bar Chart", path: "BAR-CHART/index.html" },
+    { name: "Blog", path: "BLOG-TEMPLATE/index.html" },
     { name: "BMI Calculator", path: "BMI-CALCULATOR/index.html" },
     { name: "Book List App", path: "BOOK-LIST-APP/index.html" },
     { name: "Bookmark Saver", path: "BOOKMARK-SAVER/index.html" },
