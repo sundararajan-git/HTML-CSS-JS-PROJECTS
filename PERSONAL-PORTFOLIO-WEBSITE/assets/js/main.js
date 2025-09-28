@@ -9,9 +9,8 @@ function navBarLoad() {
 
             const navBar = document.getElementById("navBar")
             const mobileNavBar = document.getElementById("mobileNavBar")
-            navBar.innerHTML = data;
-            mobileNavBar.innerHTML = data;
-
+            navBar ? navBar.innerHTML = data : null
+            mobileNavBar ? mobileNavBar.innerHTML = data : null
             const currentPath = window.location.pathname
 
             navBar.querySelectorAll("a").forEach((link) => {

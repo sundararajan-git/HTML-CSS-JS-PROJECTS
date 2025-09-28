@@ -10,6 +10,9 @@
   box-size: border-box;
   font-family: "Questrial", sans-serif !important;
 }
+body {
+  background-color: white;
+}
 
 header {
   background-color: var(--primary);
@@ -99,4 +102,30 @@ nav ul li:hover {
     display: block;
     color: black;
   }
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #797979ff transparent;
+}
+
+/* Chrome, Edge, Safari */
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #fff;
+  border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #797979ff;
+  border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #797979ff;
 }
