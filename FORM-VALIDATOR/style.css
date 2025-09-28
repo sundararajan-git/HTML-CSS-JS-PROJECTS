@@ -18,6 +18,7 @@ body {
   justify-content: center;
   min-height: 100vh;
   padding: 30px;
+  background-color: white;
 }
 
 .header {
@@ -120,4 +121,30 @@ button[type="submit"]:active {
   form {
     padding: 20px;
   }
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #797979ff transparent;
+}
+
+/* Chrome, Edge, Safari */
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #fff;
+  border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #797979ff;
+  border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #797979ff;
 }

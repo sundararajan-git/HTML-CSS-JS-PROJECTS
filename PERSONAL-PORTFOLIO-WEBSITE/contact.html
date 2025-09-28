@@ -14,20 +14,34 @@
       referrerpolicy="no-referrer"
     />
     <title>Personal Portfolio</title>
+    <style type="text/tailwindcss">
+      @custom-variant dark (&:where(.dark, .dark *));
+      @theme {
+        --color-clifford: #ff0000;
+      }
+    </style>
     <!-- tailwind css -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- script files -->
     <script src="assets/js/main.js" defer></script>
+    <script>
+      const root = document.documentElement;
+      (() => {
+        // root.classList.toggle("dark");
+      })();
+    </script>
   </head>
-  <body>
+  <body class="bg-white dark:bg-black dark:text-white">
     <title>Contact</title>
     <header id="navBar"></header>
-    <main class="bg-gray-50">
+    <main class="dark:bg-black">
       <section id="contact" class="py-12">
         <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-10">
           <div class="space-y-6">
-            <h2 class="text-2xl font-bold text-gray-800">Get in Touch</h2>
-            <p class="text-gray-600">
+            <h2 class="text-2xl font-bold text-gray-800 dark:text-white">
+              Get in Touch
+            </h2>
+            <p class="text-gray-600 dark:text-gray-400">
               I’d love to hear from you! Whether you have a project in mind, a
               question, or just want to say hello, feel free to reach out.
             </p>
@@ -35,20 +49,29 @@
             <div class="space-y-4">
               <div class="flex items-center gap-3">
                 <i class="fa-solid fa-envelope text-orange-600 text-lg"></i>
-                <span class="text-gray-700">maxdavid@gmail.com</span>
+                <span class="text-gray-700 dark:text-gray-400"
+                  >maxdavid@gmail.com</span
+                >
               </div>
               <div class="flex items-center gap-3">
                 <i class="fa-solid fa-phone text-orange-600 text-lg"></i>
-                <span class="text-gray-700">+91 8128133743</span>
+                <span class="text-gray-700 dark:text-gray-400"
+                  >+91 8128133743</span
+                >
               </div>
               <div class="flex items-center gap-3">
                 <i class="fa-solid fa-location-dot text-orange-600 text-lg"></i>
-                <span class="text-gray-700">Tamil nadu, India</span>
+                <span class="text-gray-700 dark:text-gray-400"
+                  >Tamil nadu, India</span
+                >
               </div>
             </div>
 
             <div class="flex gap-4 mt-6">
-              <a href="#" class="text-gray-500 hover:text-orange-600 text-xl">
+              <a
+                href="#"
+                class="text-gray-500 hover:text-orange-600 text-xl cursor-pointer"
+              >
                 <i class="fa-brands fa-github"></i>
               </a>
               <a href="#" class="text-gray-500 hover:text-orange-600 text-xl">
@@ -60,36 +83,39 @@
             </div>
           </div>
 
-          <div class="bg-white shadow rounded-lg p-6">
+          <div class="bg-white dark:bg-black shadow rounded-lg p-6">
             <form action="#" class="space-y-4">
               <div>
-                <label class="block text-sm font-medium text-gray-700"
+                <label
+                  class="block text-sm font-medium text-gray-700 dark:text-gray-400"
                   >Name</label
                 >
                 <input
                   type="text"
                   placeholder="Your Name"
-                  class="w-full mt-1 p-2 border rounded-md focus:ring-orange-500 focus:border-orange-500"
+                  class="w-full mt-1 p-2 border dark:border-gray-700 rounded-md focus:ring-orange-500 focus:border-orange-500"
                 />
               </div>
               <div>
-                <label class="block text-sm font-medium text-gray-700"
+                <label
+                  class="block text-sm font-medium text-gray-700 dark:text-gray-400"
                   >Email</label
                 >
                 <input
                   type="email"
                   placeholder="Your Email"
-                  class="w-full mt-1 p-2 border rounded-md focus:ring-orange-500 focus:border-orange-500"
+                  class="w-full mt-1 p-2 border dark:border-gray-700 rounded-md focus:ring-orange-500 focus:border-orange-500"
                 />
               </div>
               <div>
-                <label class="block text-sm font-medium text-gray-700"
+                <label
+                  class="block text-sm font-medium dark:text-gray-400 text-gray-700"
                   >Message</label
                 >
                 <textarea
                   rows="4"
                   placeholder="Your Message"
-                  class="w-full mt-1 p-2 border rounded-md focus:ring-orange-500 focus:border-orange-500"
+                  class="w-full mt-1 p-2 border dark:text-gray-700 rounded-md focus:ring-orange-500 focus:border-orange-500"
                 ></textarea>
               </div>
               <button

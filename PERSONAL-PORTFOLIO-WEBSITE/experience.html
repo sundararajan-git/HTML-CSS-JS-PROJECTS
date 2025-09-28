@@ -14,17 +14,29 @@
       referrerpolicy="no-referrer"
     />
     <title>Experience</title>
+    <style type="text/tailwindcss">
+      @custom-variant dark (&:where(.dark, .dark *));
+      @theme {
+        --color-clifford: #ff0000;
+      }
+    </style>
     <!-- tailwind css -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- script files -->
     <script src="assets/js/main.js" defer></script>
+    <script>
+      const root = document.documentElement;
+      (() => {
+        // root.classList.toggle("dark");
+      })();
+    </script>
   </head>
-  <body>
+  <body class="bg-white dark:bg-black dark:text-white">
     <header id="navBar"></header>
     <main class="flex flex-col gap-8 p-4 h-full overflow-auto">
       <div class="flex flex-col gap-4">
         <p
-          class="flex items-center gap-1.5 bg-red-50 text-orange-600 w-fit px-2 py-1 text-sm rounded-[5px]"
+          class="flex items-center gap-1.5 bg-red-50 dark:bg-gray-900 text-orange-600 w-fit px-2 py-1 text-sm rounded-[5px]"
         >
           <i class="fa-solid fa-user fa-sm"></i>
           <span>Education & Experience</span>

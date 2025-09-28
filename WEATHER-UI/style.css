@@ -12,6 +12,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background-color: light-dark(white, black);
 }
 
 .container {
@@ -85,4 +86,30 @@ body {
 .weather-details .detail h3 {
   font-size: 18px;
   font-weight: 500;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #797979ff transparent;
+}
+
+/* Chrome, Edge, Safari */
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #fff;
+  border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #797979ff;
+  border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #797979ff;
 }

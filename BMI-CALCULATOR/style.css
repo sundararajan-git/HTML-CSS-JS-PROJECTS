@@ -80,3 +80,29 @@ button:hover {
   alignt-items: center;
   gap: 15px;
 }
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #797979ff transparent;
+}
+
+/* Chrome, Edge, Safari */
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #fff;
+  border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #797979ff;
+  border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #797979ff;
+}
